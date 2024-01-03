@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    position: absolute;
+    z-index: 0;
+    width: 213.5vh;
+    height: 99.9vh;
+  }
+  .main{
+    margin-left: 130px;
+    margin-right: 130px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+legend, label{
+  color: blue; 
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+input {
+  padding: 13px;
+  outline: none;
+  border: 1px solid black;
+/*   border-bottom: none; */
+}
+input:hover{
+  border: 2px solid #72bf44;
+  cursor: pointer;
+}
+#browsers {
+  position: absolute;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+  font-family: sans-serif;
+  padding: 5px;
+  top: 59px;
+  left: 53px;
+  width: 130px;
+}
+
+
+#browser {
+  position: absolute;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+  font-family: sans-serif;
+  padding: 5px;
+  margin-left: 0;
+  top: 59px;
+  left: 50vh;
+  width: 130px;
+}
+
+
+option {
+  background-color: white;
+  padding: 4px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  font-size: 14px;
+}
+p{
+  padding: 11px;
+  display: inline-block;
+  color: gray;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #72bf44;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.input-field {
+  padding: 10px;
+  text-align: center;
+}
