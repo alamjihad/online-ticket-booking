@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../image/nat1.png">
+    <link rel="stylesheet" href="../css/description.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div style="display: flex;">
+            <div class="operator">
+                OPERATOR
+            </div>
+            <i style="display: flex;flex-direction: column;">
+                <i class="fa-solid fa-caret-up fa-fw" id="farUp" onclick="uping()"></i>
+                <i class="fa-solid fa-caret-down fa-fw" id="farDown" onclick="dowing()"></i>
+            </i>
+        </div>
+
+        <div style="display: flex;">
+            <div class="operator">
+                DEPARTURE TIME
+            </div>
+            <i style="display: flex;flex-direction: column;">
+                <i class="fa-solid fa-caret-up fa-fw" id="faUp" onclick="uing()"></i>
+                <i class="fa-solid fa-caret-down fa-fw" id="faDown" onclick="doing()"></i>
+            </i>
+        </div>
+
+        <div style="display: flex;">
+            <div class="fare">
+                FARE
+            </div>
+            <i style="display: flex;flex-direction: column;">
+                <i class="fa-solid fa-caret-up fa-fw" id="fareUp" onclick="upping()"></i>
+                <i class="fa-solid fa-caret-down fa-fw" id="fareDown" onclick="downing()"></i>
+            </i>
+        </div>
+        <button onclick="hideShow()" id="filter">
+            FILTER BY
+        </button>
+    </div>
+    <div class="filt" id="filt1">
+        <p>
+            Bus Type
+        </p>
+        <p>
+            <input type="checkbox" onclick="nonac()">NON AC
+        </p>
+        <p>
+            <input type="checkbox" onclick="ac()">AC
+        </p>
+    </div>
+    <div class="filt" id="filt2">
+        <p>
+            Buses
+        </p>
+        <p>
+            <input type="checkbox">
+        </p>
+        <p>
+            <input type="checkbox">
+        </p>
+        <p>
+            <input type="checkbox">
+        </p>
+        <p>
+            <input type="checkbox">
+        </p>
+    </div>
+    <!-- <div class="increase-list"></div>
+
+    <id id="result">
+        
+    </id> -->
+    <div class="exercise-list">
+
+    </div>
+    <script src="../js/description.js"></script>
+</body>
+</html>
