@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> 
+  <title>BDTICKETS</title>
+  <link rel="icon" type="image/x-icon" href="../image/nat1.png">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../css/index.css">
+<body>
+  <img src="../image/scania_bus.jpg">
+  <div class="main">
+    <input  autocomplete="off" role="combobox" list="" id="input" name="browsers" placeholder="STARTING FROM">
+    <!-- Its important that you keep list attribute empty to hide the default dropdown icon and the browser's default datalist -->
+
+    <datalist id="browsers" role="listbox">
+      <option value="Dhaka">Dhaka</option>
+      <option value="Chittagong">Chittagong</option>
+      <option value="Rajshahi">Rajshahi</option>
+      <option value="Khulna">Khulna</option>
+      <option value="Barishal">Barishal</option>
+      <option value="Shylet">Shylet</option>
+      <option value="Dinazpur">Dinazpur</option>
+      <option value="Rangpur">Rangpur</option>
+    </datalist>
+
+
+    <input  autocomplete="off" role="combobox" list="" id="inpu" name="browser" placeholder="FINISHING TO">
+    <datalist id="browser" role="listbox">
+      <option value="Rangpur">Rangpur</option>
+      <option value="Dinazpur">Dinazpur</option>
+      <option value="Shylet">Shylet</option>
+      <option value="Barishal">Barishal</option>
+      <option value="Khulna">Khulna</option>
+      <option value="Rajshahi">Rajshahi</option>
+      <option value="Chittagong">Chittagong</option>
+      <option value="Dhaka">Dhaka</option>
+    </datalist>
+    <input type="date" required>
+    <p>
+        Return Date
+    </p>
+    <button>
+      <a href="../description/description.html">
+          SEARCH
+      </a>
+  </button>
+  </div>
+  <script src="../js/index.js"></script>
+</body>
+</html> 
