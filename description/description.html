@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
     <link rel="icon" type="image/x-icon" href="../image/nat1.png">
     <link rel="stylesheet" href="../css/description.css">
+    <link rel="stylesheet" href="../css/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main">
@@ -59,16 +62,10 @@
             Buses
         </p>
         <p>
-            <input type="checkbox">
+            <input type="checkbox" onclick="han()"> Hanif
         </p>
         <p>
-            <input type="checkbox">
-        </p>
-        <p>
-            <input type="checkbox">
-        </p>
-        <p>
-            <input type="checkbox">
+            <input type="checkbox" onclick="sha()"> Shamoly
         </p>
     </div>
     <!-- <div class="increase-list"></div>
@@ -76,9 +73,20 @@
     <id id="result">
         
     </id> -->
-    <div class="exercise-list">
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Price</th>
+            <th>Offday</th>
+            <th>Start Destination</th>
+            <th>End Destination</th>
+        </tr>
+        <tbody id="myTable">
 
-    </div>
+        </tbody>
+    </table>
     <script src="../js/description.js"></script>
 </body>
 </html>

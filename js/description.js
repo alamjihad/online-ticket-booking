@@ -1,9 +1,9 @@
 (function() {
     exerciseList = document.querySelector(".exercise-list");
 
-   let exerciseObjects = [
+   let myArray = [
 {
-   operator:"Operator: Hanif, ",
+   operator:'Operator: Hanif, ',
    startTime: 'Starting at: 7pm,',
    endTime:' Ending at: 10pm, ',
    price:800,
@@ -203,14 +203,23 @@
    endDestination:' Destination: Chittagong, '
 }
 ];
-
-   let exerciseItems = "";
-
-   for (exercise of exerciseObjects) {
-       exerciseItems +=  exercise.operator +" " +  exercise.startTime+" "+ exercise.endTime+" "+ exercise.price+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-   }
-   exerciseList.innerHTML = exerciseItems;
-   
+buildTable(myArray)
+function buildTable(data){
+    var table = document.getElementById('myTable');
+    for(var i=0;i<data.length;i++)
+    {
+        var row=`<tr>
+        <td>${data[i].operator}</td>
+        <td>${data[i].startTime}</td>
+        <td>${data[i].endTime}</td>
+        <td>${data[i].price}</td>
+        <td>${data[i].offday}</td>
+        <td>${data[i].startDestination}</td>
+        <td>${data[i].endDestination}</td>
+        </tr>`
+        table.innerHTML+=row;
+    }
+}
 })();
 
 var div1=document.getElementById('filt1');
@@ -231,7 +240,7 @@ else
 }
 }
 
-let exerciseObjects = [
+let myArray = [
 {
    operator:"Operator: Hanif, ",
    startTime:7,
@@ -253,7 +262,7 @@ let exerciseObjects = [
    endDestination:' Destination: Chittagong '
 },
 {
-   operator:'Operator: KTC, ', 
+   operator:'Operator: Hanif, ', 
    startTime:8,
    endTime:' Ending at: 12pm,',
    price:750,
@@ -263,7 +272,7 @@ let exerciseObjects = [
    endDestination:' Destination: Rajshahi '
 },
 {
-   operator:'Operator: Shamoly ,',
+   operator:'Operator: Shamoly, ',
    startTime:6,
    endTime:' Ending at: 12 pm, ',
    price:1200,
@@ -283,7 +292,7 @@ let exerciseObjects = [
    endDestination:' Destination: Rangpur'
 },
 {
-   operator:'Operator: S.NR Travels, ',
+   operator:'Operator: Shamoly, ',
    startTime:11,
    endTime:' Ending at: 6:15 pm, ',
    price:650,
@@ -383,7 +392,7 @@ let exerciseObjects = [
    endDestination:' Destination: Chittagong, '
 },
 {
-   operator:'Operator: Asia, ',
+   operator:'Operator: Hanif, ',
    startTime:2,
    endTime:' Ending at: 10 pm, ',
    price:1050,
@@ -433,118 +442,264 @@ let exerciseObjects = [
    endDestination:' Destination: Chittagong, '
 }
 ];
-
-
     function upping(){
-       const price=(a,b)=>a.price-b.price;
-       const result= (exerciseObjects.sort(price));
-       let exerciseItems = "";
+      const price=(a,b)=>a.price-b.price;
+      const result= (myArray.sort(price));
 
-       for (exercise of exerciseObjects) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" am"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     }
 
     function downing(){
-        const pric=(a,b)=>b.price-a.price;
-        const resul= (exerciseObjects.sort(pric));
-        let exerciseItems = "";
+      const pric=(a,b)=>b.price-a.price;
+      const result= (myArray.sort(pric));
 
-        for (exercise of exerciseObjects) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" am"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     }
 
     function uing(){
-        const price=(a,b)=>a.startTime-b.startTime;
-        const result= (exerciseObjects.sort(price));
-        let exerciseItems = "";
+      const price=(a,b)=>a.startTime-b.startTime;
+      const result= (myArray.sort(price));
 
-        for (exercise of exerciseObjects) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" am"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     }
 
     function doing(){
-        const pric=(a,b)=>b.startTime-a.startTime;
-        const resul= (exerciseObjects.sort(pric));
-        let exerciseItems = "";
+      const pric=(a,b)=>b.startTime-a.startTime;
+      const result= (myArray.sort(pric));
 
-        for (exercise of exerciseObjects) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" pm"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     }
 
     function uping(){
-        exerciseObjects.sort((a,b)=>{
+       const result= myArray.sort((a,b)=>{
             a=a.operator.toLocaleLowerCase();
             b=b.operator.toLocaleLowerCase();
             if(a<b)
             {
-                return -1;
+               return -1;
             }
             if(a>b)
             {
-                return 1;
+               return 1;
             }
             return 0;
         });
-        let exerciseItems = "";
 
-        for (exercise of exerciseObjects) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" am"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     }
 
     function dowing(){
-        exerciseObjects.sort((a,b)=>{
-            a=a.operator.toLocaleLowerCase();
-            b=b.operator.toLocaleLowerCase();
-            if(a>b)
-            {
-                return -1;
-            }
-            if(a<b)
-            {
-                return 1;
-            }
-            return 0;
-        });
-        let exerciseItems = "";
+      const result=myArray.sort((a,b)=>{
+         a=a.operator.toLocaleLowerCase();
+         b=b.operator.toLocaleLowerCase();
+         if(a>b)
+         {
+               return -1;
+         }
+         if(a<b)
+         {
+               return 1;
+         }
+         return 0;
+      });
 
-        for (exercise of exerciseObjects) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" am"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     }
 
     function nonac(){
-        const result=(exerciseObjects.filter(price =>{
-            return price.ac==='false';
-        }));
-        console.log(result);
-        let exerciseItems = "";
- 
-        for (exercise of result) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" am"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      const result=(myArray.filter(price =>{
+         return price.ac==='false';
+      }));
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     }
 
     function ac(){
-        const result=(exerciseObjects.filter(price =>{
-            return price.ac==='true';
-        }));
-        console.log(result);
-        let exerciseItems = "";
- 
-        for (exercise of result) {
-            exerciseItems +=  exercise.operator +" " +" Starting at: "+  exercise.startTime+" am"+" "+ exercise.endTime+" "+ "Price:"+exercise.price+"TK,"+" "+ exercise.startDestination+" "+ exercise.endDestination+" " + "<br>"+"<br>";
-        }
-        exerciseList.innerHTML = exerciseItems;
+      const result=(myArray.filter(price =>{
+         return price.ac==='true';
+      }));
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
     } 
+
+    function han(){
+      const result=(myArray.filter(price =>{
+         return price.operator==='Operator: Hanif, ';
+      }));
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+  }
+
+  function sha(){
+      const result=(myArray.filter(price =>{
+         return price.operator==='Operator: Shamoly, ';
+      }));
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+  } 
