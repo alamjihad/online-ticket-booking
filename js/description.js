@@ -23,7 +23,7 @@
    endDestination:' Destination: Chittagong '
 },
 {
-   operator:'Operator: KTC, ', 
+   operator:'Operator: Hanif, ', 
    startTime:' Starting at: 8pm, ',
    endTime:' Ending at: 12pm,',
    price:750,
@@ -332,7 +332,7 @@ let myArray = [
    endDestination:' Destination: Rajshahi, '
 },
 {
-   operator:'Operator: Desh travels, ',
+   operator:'Operator: Soudia, ',
    startTime:3,
    endTime:' Ending at: 10 pm, ',
    price:1000,
@@ -352,7 +352,7 @@ let myArray = [
    endDestination:' Destination: Rajshahi, '
 },
 {
-   operator:'Operator: Padma Exclusive, ',
+   operator:'Operator: Soudia, ',
    startTime:9,
    endTime:' Ending at: 12 pm, ',
    price:350,
@@ -372,7 +372,7 @@ let myArray = [
    endDestination:' Destination: Shylet, '
 },
 {
-   operator:"Operator: Eagle, ",
+   operator:"Operator: Soudia, ",
    startTime:11,
    endTime:' Ending at: 3 pm, ',
    price:700,
@@ -422,7 +422,7 @@ let myArray = [
    endDestination:' Destination: Dhaka, '
 },
 {
-   operator:'Operator: Shahi, ',
+   operator:'Operator: Soudia, ',
    startTime:10,
    endTime:' Ending at: 5 am, ',
    price:450,
@@ -432,7 +432,7 @@ let myArray = [
    endDestination:' Destination: Shylet, '
 },
 {
-   operator:'Operator: Grameen, ',
+   operator:'Operator: Soudia, ',
    startTime:5,
    endTime:' Ending at: 12 pm, ',
    price:800,
@@ -615,7 +615,7 @@ let myArray = [
       buildTable(result)
       function buildTable(data){
          var table = document.getElementById('myTable');
-         table.innerHTML="";
+         //table.innerHTML="";
          for(var i=0;i<data.length;i++)
          {
             var row=`<tr>
@@ -687,7 +687,7 @@ let myArray = [
       buildTable(result)
       function buildTable(data){
          var table = document.getElementById('myTable');
-         table.innerHTML="";
+         //table.innerHTML="";
          for(var i=0;i<data.length;i++)
          {
             var row=`<tr>
@@ -702,4 +702,28 @@ let myArray = [
             table.innerHTML+=row;
          }
       }
-  } 
+  }
+
+  function sou(){
+   const result=(myArray.filter(price =>{
+      return price.operator==='Operator: Soudia, ';
+   }));
+   buildTable(result)
+   function buildTable(data){
+      var table = document.getElementById('myTable');
+      //table.innerHTML="";
+      for(var i=0;i<data.length;i++)
+      {
+         var row=`<tr>
+         <td>${data[i].operator}</td>
+         <td>Starting at: ${data[i].startTime} am</td>
+         <td>${data[i].endTime}</td>
+         <td>${data[i].price}</td>
+         <td>${data[i].offday}</td>
+         <td>${data[i].startDestination}</td>
+         <td>${data[i].endDestination}</td>
+         </tr>`
+         table.innerHTML+=row;
+      }
+   }
+}
