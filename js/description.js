@@ -614,7 +614,7 @@ var khe=1;
     }
 
     function nonac(){
-      if(kha===1)
+      if(kha===1&&khb===1)
       {
          console.log("kha = 1")
          const result=(myArray.filter(price =>{
@@ -743,6 +743,7 @@ var khe=1;
             }
          }
          khc=0;
+         khd=3;
       }
       else
       {
@@ -766,6 +767,7 @@ var khe=1;
                }
             }
             khc=1;
+            khd=1;
       }
   }
 
@@ -795,6 +797,34 @@ var khe=1;
          }
       }
       khd=0;
+      khe=3;
+   }
+   else if(khd===3)
+   {
+      console.log("khd = 3");
+      const result=(myArray.filter(price =>{
+         return price.operator==='Operator: Shamoly, ';
+      }));
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+        // table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+      khd=0;
+      khe=3;
    }
    else
    {
@@ -818,6 +848,7 @@ var khe=1;
             }
          }
          khd=1;
+         khe=1;
    }
 }
 
@@ -847,8 +878,36 @@ function sou(){
          }
       }
       khe=0;
+      khc=3;
    }
-   else
+   else if(khe===3)
+   {
+      console.log("khd = 3");
+      const result=(myArray.filter(price =>{
+         return price.operator==='Operator: Soudia, ';
+      }));
+      buildTable(result)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+        // table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+      khe=0;
+      khc=3;
+   }
+   else if(khe===0)
    {
       console.log("khe = 0");
       buildTable(myArray)
@@ -870,5 +929,6 @@ function sou(){
             }
          }
          khe=1;
+         khc=1;
    }
 }
