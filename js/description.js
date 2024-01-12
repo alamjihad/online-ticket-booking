@@ -276,7 +276,7 @@ let myArray = [
    startTime:6,
    endTime:' Ending at: 12 pm, ',
    price:1200,
-   ac:'false',
+   ac:'true',
    offday:['saturday','tuesday'],
    startDestination:' Starting from: Chittagong',
    endDestination:' Destination: Rajshahi'
@@ -442,16 +442,19 @@ let myArray = [
    endDestination:' Destination: Chittagong, '
 }
 ];
-var kha=1;
-var khb=1;
-var khc=1;
-var khd=1;
-var khe=1;
+let kha=1;
+let khb=1;
+let khc=1;
+let khd=1;
+let khe=1;
+let cca=0;
+let ccb=0;
+let ccc=0;
     function upping(){
       const price=(a,b)=>a.price-b.price;
-      const result= (myArray.sort(price));
+      const result1= (myArray.sort(price));
 
-      buildTable(result)
+      buildTable(result1)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -473,9 +476,9 @@ var khe=1;
 
     function downing(){
       const pric=(a,b)=>b.price-a.price;
-      const result= (myArray.sort(pric));
+      const result2= (myArray.sort(pric));
 
-      buildTable(result)
+      buildTable(result2)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -497,9 +500,9 @@ var khe=1;
 
     function uing(){
       const price=(a,b)=>a.startTime-b.startTime;
-      const result= (myArray.sort(price));
+      const result3= (myArray.sort(price));
 
-      buildTable(result)
+      buildTable(result3)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -521,9 +524,9 @@ var khe=1;
 
     function doing(){
       const pric=(a,b)=>b.startTime-a.startTime;
-      const result= (myArray.sort(pric));
+      const result4= (myArray.sort(pric));
 
-      buildTable(result)
+      buildTable(result4)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -544,7 +547,7 @@ var khe=1;
     }
 
     function uping(){
-       const result= myArray.sort((a,b)=>{
+       const result5= myArray.sort((a,b)=>{
             a=a.operator.toLocaleLowerCase();
             b=b.operator.toLocaleLowerCase();
             if(a<b)
@@ -558,7 +561,7 @@ var khe=1;
             return 0;
         });
 
-      buildTable(result)
+      buildTable(result5)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -579,7 +582,7 @@ var khe=1;
     }
 
     function dowing(){
-      const result=myArray.sort((a,b)=>{
+      const result6=myArray.sort((a,b)=>{
          a=a.operator.toLocaleLowerCase();
          b=b.operator.toLocaleLowerCase();
          if(a>b)
@@ -593,7 +596,7 @@ var khe=1;
          return 0;
       });
 
-      buildTable(result)
+      buildTable(result6)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -613,14 +616,69 @@ var khe=1;
       }
     }
 
-    function nonac(){
-      if(kha===1&&khb===1)
+   function nonac(){
+   if(kha===1&&khb===1)
+   {
+      console.log("kha = 1")
+      const result7=(myArray.filter(price =>{
+         return price.ac==='false';
+      }));
+      buildTable(result7)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+      kha=0
+      cca=2;
+      ccb=2;
+      ccc=2;
+   }
+   else
+   {
+      console.log("kha = 0");
+      buildTable(myArray)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+      kha=1;
+   }
+   }
+
+   function ac(){
+      if(khb===1)
       {
-         console.log("kha = 1")
-         const result=(myArray.filter(price =>{
-            return price.ac==='false';
+         console.log("khb = 1")
+         const result8=(myArray.filter(price =>{
+            return price.ac==='true';
          }));
-         buildTable(result)
+         buildTable(result8)
          function buildTable(data){
             var table = document.getElementById('myTable');
             table.innerHTML="";
@@ -638,11 +696,14 @@ var khe=1;
                table.innerHTML+=row;
             }
          }
-         kha=0
+         khb=0
+         cca=1;
+         ccb=1;
+         ccc=1;
       }
       else
       {
-         console.log("kha = 0");
+         console.log("khb = 0");
          buildTable(myArray)
          function buildTable(data){
             var table = document.getElementById('myTable');
@@ -661,70 +722,79 @@ var khe=1;
                table.innerHTML+=row;
             }
          }
-         kha=1;
+         khb=1;
       }
       }
-
-      function ac(){
-         if(khb===1)
-         {
-            console.log("khb = 1")
-            const result=(myArray.filter(price =>{
-               return price.ac==='true';
-            }));
-            buildTable(result)
-            function buildTable(data){
-               var table = document.getElementById('myTable');
-               table.innerHTML="";
-               for(var i=0;i<data.length;i++)
-               {
-                  var row=`<tr>
-                  <td>${data[i].operator}</td>
-                  <td>Starting at: ${data[i].startTime} am</td>
-                  <td>${data[i].endTime}</td>
-                  <td>${data[i].price}</td>
-                  <td>${data[i].offday}</td>
-                  <td>${data[i].startDestination}</td>
-                  <td>${data[i].endDestination}</td>
-                  </tr>`
-                  table.innerHTML+=row;
-               }
-            }
-            khb=0
-         }
-         else
-         {
-            console.log("khb = 0");
-            buildTable(myArray)
-            function buildTable(data){
-               var table = document.getElementById('myTable');
-               table.innerHTML="";
-               for(var i=0;i<data.length;i++)
-               {
-                  var row=`<tr>
-                  <td>${data[i].operator}</td>
-                  <td>Starting at: ${data[i].startTime} am</td>
-                  <td>${data[i].endTime}</td>
-                  <td>${data[i].price}</td>
-                  <td>${data[i].offday}</td>
-                  <td>${data[i].startDestination}</td>
-                  <td>${data[i].endDestination}</td>
-                  </tr>`
-                  table.innerHTML+=row;
-               }
-            }
-            khb=1;
-         }
-         }
 
    function han(){
-      if(khc===1)
+      if(khc===1&&cca===1)
       {
          console.log("khc =1");
-         const result=(myArray.filter(price =>{
+         const result8=(myArray.filter(price =>{
             return price.operator==='Operator: Hanif, ';
          }));
-         buildTable(result)
+         const result9=(result8.filter(price =>{
+            return price.ac==='true';
+         }));
+         buildTable(result9)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime} am</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         khc=0;
+         khd=3;
+         cca=0;
+      }
+      else if(khc===1&&cca===2)
+      {
+         console.log("khc =1");
+         const result8=(myArray.filter(price =>{
+            return price.operator==='Operator: Hanif, ';
+         }));
+         const result9=(result8.filter(price =>{
+            return price.ac==='false';
+         }));
+         buildTable(result9)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime} am</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         khc=0;
+         khd=3;
+         cca=0;
+      }
+      else if(khc===1&&cca===0)
+      {
+         const result8=(myArray.filter(price =>{
+            return price.operator==='Operator: Hanif, ';
+         }));
+         buildTable(result8)
          function buildTable(data){
             var table = document.getElementById('myTable');
             table.innerHTML="";
@@ -769,16 +839,74 @@ var khe=1;
             khc=1;
             khd=1;
       }
-  }
+   }
 
   function sha(){
-   if(khd===1)
+   if(khd===1&&ccb===1)
    {
-      console.log("khd =1");
-      const result=(myArray.filter(price =>{
+      const result8=(myArray.filter(price =>{
          return price.operator==='Operator: Shamoly, ';
       }));
-      buildTable(result)
+      const result0=(result8.filter(price =>{
+         return price.ac==='true';
+      }));
+      buildTable(result0)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         // table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+      ccb=0;
+      khd=0;
+   }
+   else if(khd===1&&ccb===2)
+   {
+      const result8=(myArray.filter(price =>{
+         return price.operator==='Operator: Shamoly, ';
+      }));
+      const result0=(result8.filter(price =>{
+         return price.ac==='false';
+      }));
+      buildTable(result0)
+      function buildTable(data){
+         var table = document.getElementById('myTable');
+         // table.innerHTML="";
+         for(var i=0;i<data.length;i++)
+         {
+            var row=`<tr>
+            <td>${data[i].operator}</td>
+            <td>Starting at: ${data[i].startTime} am</td>
+            <td>${data[i].endTime}</td>
+            <td>${data[i].price}</td>
+            <td>${data[i].offday}</td>
+            <td>${data[i].startDestination}</td>
+            <td>${data[i].endDestination}</td>
+            </tr>`
+            table.innerHTML+=row;
+         }
+      }
+      khd=0;
+      ccb=0;
+   }
+   else if(khd===1)
+   {
+      console.log("khd =1");
+      const result0=(myArray.filter(price =>{
+         return price.operator==='Operator: Shamoly, ';
+      }));
+      buildTable(result0)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -802,10 +930,10 @@ var khe=1;
    else if(khd===3)
    {
       console.log("khd = 3");
-      const result=(myArray.filter(price =>{
+      const result0=(myArray.filter(price =>{
          return price.operator==='Operator: Shamoly, ';
       }));
-      buildTable(result)
+      buildTable(result0)
       function buildTable(data){
          var table = document.getElementById('myTable');
         // table.innerHTML="";
@@ -851,15 +979,13 @@ var khe=1;
          khe=1;
    }
 }
-
-function sou(){
-   if(khe===1)
-   {
-      console.log("khe =1");
-      const result=(myArray.filter(price =>{
+   function sou(){
+      if(khe===1)
+      {
+      const result10=(myArray.filter(price =>{
          return price.operator==='Operator: Soudia, ';
       }));
-      buildTable(result)
+      buildTable(result10)
       function buildTable(data){
          var table = document.getElementById('myTable');
          table.innerHTML="";
@@ -877,40 +1003,98 @@ function sou(){
             table.innerHTML+=row;
          }
       }
-      khe=0;
-      khc=3;
+      khd=0;
+      khe=3;
    }
-   else if(khe===3)
-   {
-      console.log("khd = 3");
-      const result=(myArray.filter(price =>{
-         return price.operator==='Operator: Soudia, ';
-      }));
-      buildTable(result)
-      function buildTable(data){
-         var table = document.getElementById('myTable');
-        // table.innerHTML="";
-         for(var i=0;i<data.length;i++)
-         {
-            var row=`<tr>
-            <td>${data[i].operator}</td>
-            <td>Starting at: ${data[i].startTime} am</td>
-            <td>${data[i].endTime}</td>
-            <td>${data[i].price}</td>
-            <td>${data[i].offday}</td>
-            <td>${data[i].startDestination}</td>
-            <td>${data[i].endDestination}</td>
-            </tr>`
-            table.innerHTML+=row;
+     else if(khe===1&&ccc===1)
+      {
+         const result8=(myArray.filter(price =>{
+            return price.operator==='Operator: Soudia, ';
+         }));
+         const result10=(result8.filter(price =>{
+            return price.ac==='true';
+         }));
+         buildTable(result10)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime} am</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
          }
+         khe=0;
+         ccc=0;
       }
-      khe=0;
-      khc=3;
-   }
-   else if(khe===0)
-   {
-      console.log("khe = 0");
-      buildTable(myArray)
+      else if(khe===1&&ccc===2)
+      {
+         console.log("khc =1");
+         const result8=(myArray.filter(price =>{
+            return price.operator==='Operator: Soudia, ';
+         }));
+         const result10=(result8.filter(price =>{
+            return price.ac==='false';
+         }));
+         buildTable(result10)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime} am</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         khe=0;
+         ccc=0;
+      }
+      else if(khe===1&&ccc===0)
+      {
+         const result10=(myArray.filter(price =>{
+            return price.operator==='Operator: Soudia, ';
+         }));
+         buildTable(result10)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime} am</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         khc=0;
+         khd=3;
+      }
+      else
+      {
+         console.log("khc = 0");
+         buildTable(myArray)
          function buildTable(data){
             var table = document.getElementById('myTable');
             table.innerHTML="";
@@ -929,6 +1113,5 @@ function sou(){
             }
          }
          khe=1;
-         khc=1;
+      }
    }
-}
