@@ -210,7 +210,7 @@ function buildTable(data){
     {
         var row=`<tr>
         <td>${data[i].operator}</td>
-        <td>Starting at: ${data[i].startTime} am</td>
+        <td>Starting at: ${data[i].startTime}</td>
         <td>${data[i].endTime}</td>
         <td>${data[i].price}</td>
         <td>${data[i].offday}</td>
@@ -243,7 +243,7 @@ else
 let myArray = [
 {
    operator:"Operator: Hanif, ",
-   startTime:7,
+   startTime:"7:00 am",
    endTime:' Ending at: 10pm, ',
    price:800,
    ac:'false',
@@ -253,7 +253,7 @@ let myArray = [
 },  
 {
    operator:'Operator: Marsa, ',
-   startTime:7,
+   startTime:"7:20 pm",
    endTime:' Ending at: 9:30am, ',
    price:1000,
    ac:'true',
@@ -263,7 +263,7 @@ let myArray = [
 },
 {
    operator:'Operator: Hanif, ', 
-   startTime:8,
+   startTime:"8:15 am",
    endTime:' Ending at: 12pm,',
    price:750,
    ac:'true',
@@ -273,7 +273,7 @@ let myArray = [
 },
 {
    operator:'Operator: Shamoly, ',
-   startTime:6,
+   startTime:"6:00 pm",
    endTime:' Ending at: 12 pm, ',
    price:1200,
    ac:'true',
@@ -283,7 +283,7 @@ let myArray = [
 },
 {
    operator:"Operator: Soudia ,",
-   startTime:12,
+   startTime:"12:30 pm",
    endTime:' Ending at: 8 pm, ',
    price:500,
    ac:'true',
@@ -293,7 +293,7 @@ let myArray = [
 },
 {
    operator:'Operator: Shamoly, ',
-   startTime:11,
+   startTime:"11:45 am",
    endTime:' Ending at: 6:15 pm, ',
    price:650,
    ac:'false',
@@ -303,7 +303,7 @@ let myArray = [
 },
 {
    operator:'Operator: S.Alam, ',
-   startTime:4,
+   startTime:"4:15 pm",
    endTime:' Ending at: 12 pm, ',
    price:900,
    ac:'false',
@@ -313,7 +313,7 @@ let myArray = [
 },
 {
    operator:'Operator: Econo, ',
-   startTime:11,
+   startTime:"11:10 am",
    endTime:' Ending at: 8:45 am, ',
    price:5500,
    ac:'false',
@@ -323,7 +323,7 @@ let myArray = [
 },
 {
    operator:"Operator: Sakura, ",
-   startTime:7,
+   startTime:"7:45 pm",
    endTime:' Ending at: 3 am, ',
    price:1000,
    ac:'true',
@@ -333,7 +333,7 @@ let myArray = [
 },
 {
    operator:'Operator: Soudia, ',
-   startTime:3,
+   startTime:"3:50 am",
    endTime:' Ending at: 10 pm, ',
    price:1000,
    ac:'true',
@@ -343,7 +343,7 @@ let myArray = [
 },
 {
    operator:'Operator: Ekushey, ',
-   startTime:5,
+   startTime:"5:10 pm",
    endTime:' Ending at: 11:50 pm, ',
    price:650,
    ac:'true',
@@ -353,7 +353,7 @@ let myArray = [
 },
 {
    operator:'Operator: Soudia, ',
-   startTime:9,
+   startTime:"9:10 pm",
    endTime:' Ending at: 12 pm, ',
    price:350,
    ac:'false',
@@ -363,7 +363,7 @@ let myArray = [
 },
 {
    operator:'Operator: Unique, ',
-   startTime:7,
+   startTime:"7:35 am",
    endTime:' Ending at: 11:55 pm, ',
    price:500,
    ac:'false',
@@ -373,7 +373,7 @@ let myArray = [
 },
 {
    operator:"Operator: Soudia, ",
-   startTime:11,
+   startTime:"10:25 am",
    endTime:' Ending at: 3 pm, ',
    price:700,
    ac:'false',
@@ -383,7 +383,7 @@ let myArray = [
 },
 {
    operator:'Operator: Lal Sabuj, ',
-   startTime:11,
+   startTime:"9:05 pm",
    endTime:' Ending at: 7 pm, ',
    price:850,
    ac:'false',
@@ -393,7 +393,7 @@ let myArray = [
 },
 {
    operator:'Operator: Hanif, ',
-   startTime:2,
+   startTime:"2:50 pm",
    endTime:' Ending at: 10 pm, ',
    price:1050,
    ac:'false',
@@ -403,7 +403,7 @@ let myArray = [
 },
 {
    operator:'Operator: Dhaka Express, ',
-   startTime:11,
+   startTime:"5:30 am",
    endTime:' Ending at: 4:55 am, ',
    price:750,
    ac:'true',
@@ -413,7 +413,7 @@ let myArray = [
 },
 {
    operator:'Operator: Jonaki, ',
-   startTime:8,
+   startTime:"8:55 pm",
    endTime:' Ending at: 11:45 am, ',
    price:550,
    ac:'false',
@@ -423,7 +423,7 @@ let myArray = [
 },
 {
    operator:'Operator: Soudia, ',
-   startTime:10,
+   startTime:"1:00 pm",
    endTime:' Ending at: 5 am, ',
    price:450,
    ac:'true',
@@ -433,7 +433,7 @@ let myArray = [
 },
 {
    operator:'Operator: Soudia, ',
-   startTime:5,
+   startTime:"6:40 am",
    endTime:' Ending at: 12 pm, ',
    price:800,
    ac:'false',
@@ -454,7 +454,7 @@ let myArray = [
          {
             var row=`<tr>
             <td>${data[i].operator}</td>
-            <td>Starting at: ${data[i].startTime} am</td>
+            <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
             <td>${data[i].offday}</td>
@@ -478,7 +478,7 @@ let myArray = [
          {
             var row=`<tr>
             <td>${data[i].operator}</td>
-            <td>Starting at: ${data[i].startTime} am</td>
+            <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
             <td>${data[i].offday}</td>
@@ -491,9 +491,9 @@ let myArray = [
     }
 
     function uing(){
-      const price=(a,b)=>a.startTime-b.startTime;
-      const result3= (myArray.sort(price));
-
+      const result3=myArray.sort(function(a,b){
+         return Date.parse('1970/01/01 ' + a.startTime.slice(0, -2) + ' ' + a.startTime.slice(-2)) - Date.parse('1970/01/01 ' + b.startTime.slice(0, -2) + ' ' + b.startTime.slice(-2))
+      });
       buildTable(result3)
       function buildTable(data){
          var table = document.getElementById('myTable');
@@ -502,7 +502,7 @@ let myArray = [
          {
             var row=`<tr>
             <td>${data[i].operator}</td>
-            <td>Starting at: ${data[i].startTime} am</td>
+            <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
             <td>${data[i].offday}</td>
@@ -515,9 +515,9 @@ let myArray = [
     }
 
     function doing(){
-      const pric=(a,b)=>b.startTime-a.startTime;
-      const result4= (myArray.sort(pric));
-
+      const result4=myArray.sort(function(a,b){
+         return Date.parse('1970/01/01 ' + b.startTime.slice(0, -2) + ' ' + b.startTime.slice(-2)) - Date.parse('1970/01/01 ' + a.startTime.slice(0, -2) + ' ' + a.startTime.slice(-2))
+      });
       buildTable(result4)
       function buildTable(data){
          var table = document.getElementById('myTable');
@@ -526,7 +526,7 @@ let myArray = [
          {
             var row=`<tr>
             <td>${data[i].operator}</td>
-            <td>Starting at: ${data[i].startTime} am</td>
+            <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
             <td>${data[i].offday}</td>
@@ -561,7 +561,7 @@ let myArray = [
          {
             var row=`<tr>
             <td>${data[i].operator}</td>
-            <td>Starting at: ${data[i].startTime} am</td>
+            <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
             <td>${data[i].offday}</td>
@@ -596,7 +596,7 @@ let myArray = [
          {
             var row=`<tr>
             <td>${data[i].operator}</td>
-            <td>Starting at: ${data[i].startTime} am</td>
+            <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
             <td>${data[i].offday}</td>
@@ -639,7 +639,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -666,7 +666,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -692,7 +692,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -718,7 +718,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -744,7 +744,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -797,7 +797,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -824,7 +824,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -850,7 +850,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -876,7 +876,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -902,7 +902,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -956,7 +956,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -976,7 +976,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1001,7 +1001,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1026,7 +1026,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1051,7 +1051,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1082,7 +1082,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1109,7 +1109,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1134,7 +1134,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1160,7 +1160,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1189,7 +1189,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1216,7 +1216,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1267,7 +1267,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1287,7 +1287,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1312,7 +1312,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1337,7 +1337,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1362,7 +1362,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1393,7 +1393,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1420,7 +1420,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1446,7 +1446,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1475,7 +1475,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1501,7 +1501,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1526,7 +1526,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1577,7 +1577,7 @@ let myArray = [
       //       {
       //          var row=`<tr>
       //          <td>${data[i].operator}</td>
-      //          <td>Starting at: ${data[i].startTime} am</td>
+      //          <td>Starting at: ${data[i].startTime}</td>
       //          <td>${data[i].endTime}</td>
       //          <td>${data[i].price}</td>
       //          <td>${data[i].offday}</td>
@@ -1597,7 +1597,7 @@ let myArray = [
       //       {
       //          var row=`<tr>
       //          <td>${data[i].operator}</td>
-      //          <td>Starting at: ${data[i].startTime} am</td>
+      //          <td>Starting at: ${data[i].startTime}</td>
       //          <td>${data[i].endTime}</td>
       //          <td>${data[i].price}</td>
       //          <td>${data[i].offday}</td>
@@ -1622,7 +1622,7 @@ let myArray = [
       //       {
       //          var row=`<tr>
       //          <td>${data[i].operator}</td>
-      //          <td>Starting at: ${data[i].startTime} am</td>
+      //          <td>Starting at: ${data[i].startTime}</td>
       //          <td>${data[i].endTime}</td>
       //          <td>${data[i].price}</td>
       //          <td>${data[i].offday}</td>
@@ -1648,7 +1648,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1679,7 +1679,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1706,7 +1706,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1732,7 +1732,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1761,7 +1761,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1787,7 +1787,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
@@ -1812,7 +1812,7 @@ let myArray = [
             {
                var row=`<tr>
                <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime} am</td>
+               <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
                <td>${data[i].offday}</td>
