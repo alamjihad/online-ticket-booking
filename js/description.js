@@ -4,205 +4,206 @@
     let myArray = [
       {
          operator:"Operator: Hanif, ",
-         startTime:7,
-         endTime:' Ending at: 10pm, ',
+         startTime:"7:00 am",
+         endTime:' Ending at: 10:00 pm, ',
          price:800,
-         ac:'false',
+         ac:'False',
          offday:['wednesday'],
          startDestination:' Starting from: Dhaka, ',
          endDestination:' Destination: Rangpur '
       },  
       {
-         operator:'Operator: Marsa, ',
-         startTime:7,
+         operator:'Operator: Marsa ',
+         startTime:"7:20 pm",
          endTime:' Ending at: 9:30am, ',
          price:1000,
-         ac:'true',
+         ac:'True',
          offday:[''],
          startDestination:' Starting from: Shylet, ',
          endDestination:' Destination: Chittagong '
       },
       {
          operator:'Operator: Hanif, ', 
-         startTime:8,
-         endTime:' Ending at: 12pm,',
+         startTime:"8:15 am",
+         endTime:' Ending at: 12:15 pm,',
          price:750,
-         ac:'true',
+         ac:'True',
          offday:['sunday','monday'],
          startDestination:' Starting from: Khulna, ',
          endDestination:' Destination: Rajshahi '
       },
       {
          operator:'Operator: Shamoly, ',
-         startTime:6,
-         endTime:' Ending at: 12 pm, ',
+         startTime:"6:00 pm",
+         endTime:' Ending at: 12:25 pm, ',
          price:1200,
-         ac:'true',
+         ac:'True',
          offday:['saturday','tuesday'],
          startDestination:' Starting from: Chittagong',
          endDestination:' Destination: Rajshahi'
       },
       {
          operator:"Operator: Soudia ,",
-         startTime:12,
-         endTime:' Ending at: 8 pm, ',
+         startTime:"12:30 pm",
+         endTime:' Ending at: 8:35 pm, ',
          price:500,
-         ac:'true',
+         ac:'True',
          offday:['friday'],
          startDestination:' Starting from: Dhaka',
          endDestination:' Destination: Rangpur'
       },
       {
          operator:'Operator: Shamoly, ',
-         startTime:11,
+         startTime:"11:45 am",
          endTime:' Ending at: 6:15 pm, ',
          price:650,
-         ac:'false',
+         ac:'False',
          offday:['wednesday','friday','monday'],
          startDestination:' Starting from: Barishal, ',
          endDestination:' Destination: Dinazpur, '
       },
       {
-         operator:'Operator: S.Alam, ',
-         startTime:4,
-         endTime:' Ending at: 12 pm, ',
+         operator:'Operator: Marsa ',
+         startTime:"4:15 pm",
+         endTime:' Ending at: 12:00 pm, ',
          price:900,
-         ac:'false',
+         ac:'False',
          offday:['thursday'],
          startDestination:' Starting from: Dinazpur, ',
          endDestination:' Destination: Barishal, '
       },
       {
-         operator:'Operator: Econo, ',
-         startTime:11,
+         operator:'Operator: Shamoly, ',
+         startTime:"11:10 am",
          endTime:' Ending at: 8:45 am, ',
          price:5500,
-         ac:'false',
+         ac:'True',
          offday:[''],
          startDestination:' Starting from: Rajshahi, ',
          endDestination:' Destination: Khulna, '
       },
       {
-         operator:"Operator: Sakura, ",
-         startTime:7,
-         endTime:' Ending at: 3 am, ',
+         operator:"Operator: Marsa ",
+         startTime:"7:45 pm",
+         endTime:' Ending at: 3:00 am, ',
          price:1000,
-         ac:'true',
+         ac:'True',
          offday:['sunday','monday','thursday'],
          startDestination:' Starting from: Khulna, ',
          endDestination:' Destination: Rajshahi, '
       },
       {
          operator:'Operator: Soudia, ',
-         startTime:3,
-         endTime:' Ending at: 10 pm, ',
+         startTime:"3:50 am",
+         endTime:' Ending at: 10:40 pm, ',
          price:1000,
-         ac:'true',
+         ac:'True',
          offday:['wednesday'],
          startDestination:' Starting from: Rangpur, ',
          endDestination:' Destination: Rajshahi, '
       },
       {
-         operator:'Operator: Ekushey, ',
-         startTime:5,
+         operator:'Operator: Marsa ',
+         startTime:"5:10 pm",
          endTime:' Ending at: 11:50 pm, ',
          price:650,
-         ac:'true',
+         ac:'True',
          offday:['tuesday'],
          startDestination:' Starting from: Rangpur, ',
          endDestination:' Destination: Rajshahi, '
       },
       {
          operator:'Operator: Soudia, ',
-         startTime:9,
-         endTime:' Ending at: 12 pm, ',
+         startTime:"9:10 pm",
+         endTime:' Ending at: 12:55 pm, ',
          price:350,
-         ac:'false',
+         ac:'False',
          offday:['monday'],
          startDestination:' Starting from: Rangpur, ',
          endDestination:' Destination: Rajshahi, '
       },
       {
-         operator:'Operator: Unique, ',
-         startTime:7,
+         operator:'Operator: Shamoly, ',
+         startTime:"7:35 am",
          endTime:' Ending at: 11:55 pm, ',
          price:500,
-         ac:'false',
+         ac:'False',
          offday:['thursday','tuesday'],
          startDestination:' Starting from: Barishal, ',
          endDestination:' Destination: Shylet, '
       },
       {
          operator:"Operator: Soudia, ",
-         startTime:11,
-         endTime:' Ending at: 3 pm, ',
+         startTime:"10:25 am",
+         endTime:' Ending at: 3:05 pm, ',
          price:700,
-         ac:'false',
+         ac:'False',
          offday:['wednessday','saturday'],
          startDestination:' Starting from: Dinazpur, ',
          endDestination:' Destination: Chittagong, '
       },
       {
-         operator:'Operator: Lal Sabuj, ',
-         startTime:11,
-         endTime:' Ending at: 7 pm, ',
+         operator:'Operator: Shamoly, ',
+         startTime:"9:05 pm",
+         endTime:' Ending at: 7:50 pm, ',
          price:850,
-         ac:'false',
+         ac:'False',
          offday:['friday','saturday'],
          startDestination:' Starting from: Dinazpur, ',
          endDestination:' Destination: Chittagong, '
       },
       {
          operator:'Operator: Hanif, ',
-         startTime:2,
-         endTime:' Ending at: 10 pm, ',
+         startTime:"2:50 pm",
+         endTime:' Ending at: 10:30 pm, ',
          price:1050,
-         ac:'false',
+         ac:'False',
          offday:['wednesday','saturday'],
          startDestination:' Starting from: Dinazpur, ',
          endDestination:' Destination: Chittagong, '
       },
       {
-         operator:'Operator: Dhaka Express, ',
-         startTime:11,
+         operator:'Operator: Hanif, ',
+         startTime:"5:30 am",
          endTime:' Ending at: 4:55 am, ',
          price:750,
-         ac:'true',
+         ac:'True',
          offday:[''],
          startDestination:' Starting from: Dhaka, ',
          endDestination:' Destination: Barishal, '
       },
       {
-         operator:'Operator: Jonaki, ',
-         startTime:8,
+         operator:'Operator: Marsa ',
+         startTime:"8:55 pm",
          endTime:' Ending at: 11:45 am, ',
          price:550,
-         ac:'false',
+         ac:'False',
          offday:['wednessday','saturday'],
          startDestination:' Starting from: Shylet, ',
          endDestination:' Destination: Dhaka, '
       },
       {
          operator:'Operator: Soudia, ',
-         startTime:10,
-         endTime:' Ending at: 5 am, ',
+         startTime:"1:00 pm",
+         endTime:' Ending at: 5:50 am, ',
          price:450,
-         ac:'true',
+         ac:'True',
          offday:['monday','thursday'],
          startDestination:' Starting from: Rangpur, ',
          endDestination:' Destination: Shylet, '
       },
       {
          operator:'Operator: Soudia, ',
-         startTime:5,
-         endTime:' Ending at: 12 pm, ',
+         startTime:"6:40 am",
+         endTime:' Ending at: 12:10 pm, ',
          price:800,
-         ac:'false',
+         ac:'False',
          offday:['wednesday','saturday'],
          startDestination:' Starting from: Dinazpur, ',
          endDestination:' Destination: Chittagong, '
       }
       ];
+      
 buildTable(myArray)
 function buildTable(data){
     var table = document.getElementById('myTable');
@@ -213,6 +214,7 @@ function buildTable(data){
         <td>Starting at: ${data[i].startTime}</td>
         <td>${data[i].endTime}</td>
         <td>${data[i].price}</td>
+        <td>${data[i].ac}</td>
         <td>${data[i].offday}</td>
         <td>${data[i].startDestination}</td>
         <td>${data[i].endDestination}</td>
@@ -244,19 +246,19 @@ let myArray = [
 {
    operator:"Operator: Hanif, ",
    startTime:"7:00 am",
-   endTime:' Ending at: 10pm, ',
+   endTime:' Ending at: 10:00 pm, ',
    price:800,
-   ac:'false',
+   ac:'False',
    offday:['wednesday'],
    startDestination:' Starting from: Dhaka, ',
    endDestination:' Destination: Rangpur '
 },  
 {
-   operator:'Operator: Marsa, ',
+   operator:'Operator: Marsa ',
    startTime:"7:20 pm",
    endTime:' Ending at: 9:30am, ',
    price:1000,
-   ac:'true',
+   ac:'True',
    offday:[''],
    startDestination:' Starting from: Shylet, ',
    endDestination:' Destination: Chittagong '
@@ -264,9 +266,9 @@ let myArray = [
 {
    operator:'Operator: Hanif, ', 
    startTime:"8:15 am",
-   endTime:' Ending at: 12pm,',
+   endTime:' Ending at: 12:15 pm,',
    price:750,
-   ac:'true',
+   ac:'True',
    offday:['sunday','monday'],
    startDestination:' Starting from: Khulna, ',
    endDestination:' Destination: Rajshahi '
@@ -274,9 +276,9 @@ let myArray = [
 {
    operator:'Operator: Shamoly, ',
    startTime:"6:00 pm",
-   endTime:' Ending at: 12 pm, ',
+   endTime:' Ending at: 12:25 pm, ',
    price:1200,
-   ac:'true',
+   ac:'True',
    offday:['saturday','tuesday'],
    startDestination:' Starting from: Chittagong',
    endDestination:' Destination: Rajshahi'
@@ -284,9 +286,9 @@ let myArray = [
 {
    operator:"Operator: Soudia ,",
    startTime:"12:30 pm",
-   endTime:' Ending at: 8 pm, ',
+   endTime:' Ending at: 8:35 pm, ',
    price:500,
-   ac:'true',
+   ac:'True',
    offday:['friday'],
    startDestination:' Starting from: Dhaka',
    endDestination:' Destination: Rangpur'
@@ -296,37 +298,37 @@ let myArray = [
    startTime:"11:45 am",
    endTime:' Ending at: 6:15 pm, ',
    price:650,
-   ac:'false',
+   ac:'False',
    offday:['wednesday','friday','monday'],
    startDestination:' Starting from: Barishal, ',
    endDestination:' Destination: Dinazpur, '
 },
 {
-   operator:'Operator: S.Alam, ',
+   operator:'Operator: Marsa ',
    startTime:"4:15 pm",
-   endTime:' Ending at: 12 pm, ',
+   endTime:' Ending at: 12:00 pm, ',
    price:900,
-   ac:'false',
+   ac:'False',
    offday:['thursday'],
    startDestination:' Starting from: Dinazpur, ',
    endDestination:' Destination: Barishal, '
 },
 {
-   operator:'Operator: Econo, ',
+   operator:'Operator: Shamoly, ',
    startTime:"11:10 am",
    endTime:' Ending at: 8:45 am, ',
    price:5500,
-   ac:'false',
+   ac:'True',
    offday:[''],
    startDestination:' Starting from: Rajshahi, ',
    endDestination:' Destination: Khulna, '
 },
 {
-   operator:"Operator: Sakura, ",
+   operator:"Operator: Marsa ",
    startTime:"7:45 pm",
-   endTime:' Ending at: 3 am, ',
+   endTime:' Ending at: 3:00 am, ',
    price:1000,
-   ac:'true',
+   ac:'True',
    offday:['sunday','monday','thursday'],
    startDestination:' Starting from: Khulna, ',
    endDestination:' Destination: Rajshahi, '
@@ -334,19 +336,19 @@ let myArray = [
 {
    operator:'Operator: Soudia, ',
    startTime:"3:50 am",
-   endTime:' Ending at: 10 pm, ',
+   endTime:' Ending at: 10:40 pm, ',
    price:1000,
-   ac:'true',
+   ac:'True',
    offday:['wednesday'],
    startDestination:' Starting from: Rangpur, ',
    endDestination:' Destination: Rajshahi, '
 },
 {
-   operator:'Operator: Ekushey, ',
+   operator:'Operator: Marsa ',
    startTime:"5:10 pm",
    endTime:' Ending at: 11:50 pm, ',
    price:650,
-   ac:'true',
+   ac:'True',
    offday:['tuesday'],
    startDestination:' Starting from: Rangpur, ',
    endDestination:' Destination: Rajshahi, '
@@ -354,19 +356,19 @@ let myArray = [
 {
    operator:'Operator: Soudia, ',
    startTime:"9:10 pm",
-   endTime:' Ending at: 12 pm, ',
+   endTime:' Ending at: 12:55 pm, ',
    price:350,
-   ac:'false',
+   ac:'False',
    offday:['monday'],
    startDestination:' Starting from: Rangpur, ',
    endDestination:' Destination: Rajshahi, '
 },
 {
-   operator:'Operator: Unique, ',
+   operator:'Operator: Shamoly, ',
    startTime:"7:35 am",
    endTime:' Ending at: 11:55 pm, ',
    price:500,
-   ac:'false',
+   ac:'False',
    offday:['thursday','tuesday'],
    startDestination:' Starting from: Barishal, ',
    endDestination:' Destination: Shylet, '
@@ -374,19 +376,19 @@ let myArray = [
 {
    operator:"Operator: Soudia, ",
    startTime:"10:25 am",
-   endTime:' Ending at: 3 pm, ',
+   endTime:' Ending at: 3:05 pm, ',
    price:700,
-   ac:'false',
+   ac:'False',
    offday:['wednessday','saturday'],
    startDestination:' Starting from: Dinazpur, ',
    endDestination:' Destination: Chittagong, '
 },
 {
-   operator:'Operator: Lal Sabuj, ',
+   operator:'Operator: Shamoly, ',
    startTime:"9:05 pm",
-   endTime:' Ending at: 7 pm, ',
+   endTime:' Ending at: 7:50 pm, ',
    price:850,
-   ac:'false',
+   ac:'False',
    offday:['friday','saturday'],
    startDestination:' Starting from: Dinazpur, ',
    endDestination:' Destination: Chittagong, '
@@ -394,29 +396,29 @@ let myArray = [
 {
    operator:'Operator: Hanif, ',
    startTime:"2:50 pm",
-   endTime:' Ending at: 10 pm, ',
+   endTime:' Ending at: 10:30 pm, ',
    price:1050,
-   ac:'false',
+   ac:'False',
    offday:['wednesday','saturday'],
    startDestination:' Starting from: Dinazpur, ',
    endDestination:' Destination: Chittagong, '
 },
 {
-   operator:'Operator: Dhaka Express, ',
+   operator:'Operator: Hanif, ',
    startTime:"5:30 am",
    endTime:' Ending at: 4:55 am, ',
    price:750,
-   ac:'true',
+   ac:'True',
    offday:[''],
    startDestination:' Starting from: Dhaka, ',
    endDestination:' Destination: Barishal, '
 },
 {
-   operator:'Operator: Jonaki, ',
+   operator:'Operator: Marsa ',
    startTime:"8:55 pm",
    endTime:' Ending at: 11:45 am, ',
    price:550,
-   ac:'false',
+   ac:'False',
    offday:['wednessday','saturday'],
    startDestination:' Starting from: Shylet, ',
    endDestination:' Destination: Dhaka, '
@@ -424,9 +426,9 @@ let myArray = [
 {
    operator:'Operator: Soudia, ',
    startTime:"1:00 pm",
-   endTime:' Ending at: 5 am, ',
+   endTime:' Ending at: 5:50 am, ',
    price:450,
-   ac:'true',
+   ac:'True',
    offday:['monday','thursday'],
    startDestination:' Starting from: Rangpur, ',
    endDestination:' Destination: Shylet, '
@@ -434,9 +436,9 @@ let myArray = [
 {
    operator:'Operator: Soudia, ',
    startTime:"6:40 am",
-   endTime:' Ending at: 12 pm, ',
+   endTime:' Ending at: 12:10 pm, ',
    price:800,
-   ac:'false',
+   ac:'False',
    offday:['wednesday','saturday'],
    startDestination:' Starting from: Dinazpur, ',
    endDestination:' Destination: Chittagong, '
@@ -457,6 +459,7 @@ let myArray = [
             <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
+            <td>${data[i].ac}</td>
             <td>${data[i].offday}</td>
             <td>${data[i].startDestination}</td>
             <td>${data[i].endDestination}</td>
@@ -481,6 +484,7 @@ let myArray = [
             <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
+            <td>${data[i].ac}</td>
             <td>${data[i].offday}</td>
             <td>${data[i].startDestination}</td>
             <td>${data[i].endDestination}</td>
@@ -505,6 +509,7 @@ let myArray = [
             <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
+            <td>${data[i].ac}</td>
             <td>${data[i].offday}</td>
             <td>${data[i].startDestination}</td>
             <td>${data[i].endDestination}</td>
@@ -529,6 +534,7 @@ let myArray = [
             <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
+            <td>${data[i].ac}</td>
             <td>${data[i].offday}</td>
             <td>${data[i].startDestination}</td>
             <td>${data[i].endDestination}</td>
@@ -564,6 +570,7 @@ let myArray = [
             <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
+            <td>${data[i].ac}</td>
             <td>${data[i].offday}</td>
             <td>${data[i].startDestination}</td>
             <td>${data[i].endDestination}</td>
@@ -599,6 +606,7 @@ let myArray = [
             <td>Starting at: ${data[i].startTime}</td>
             <td>${data[i].endTime}</td>
             <td>${data[i].price}</td>
+            <td>${data[i].ac}</td>
             <td>${data[i].offday}</td>
             <td>${data[i].startDestination}</td>
             <td>${data[i].endDestination}</td>
@@ -613,16 +621,19 @@ let myArray = [
     let onlyhainf=1;
     let onlyshamoly=1;
     let onlysoudia=1;
+    let onlymarsa=1;
 
     let onlyac2=0;
     let onlynonac2=0;
     let onlyhainf2=0;
     let onlyshamoly2=0;
-    let onlysoudia2=0;  
+    let onlysoudia2=0;
+    let onlymarsa2=0;  
     
     let mixhanif=0;
     let mixshamoly=0;
     let mixsoudia=0;
+    let mixmarsa=0;
 
 
    function ac(){
@@ -630,7 +641,7 @@ let myArray = [
       {
          console.log("ac and non ac all are open")
          const acBus=(myArray.filter(acbus =>{
-            return acbus.ac==='true';
+            return acbus.ac==='True';
          }));
          buildTable(acBus)
          function buildTable(data){
@@ -642,6 +653,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -669,6 +681,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -695,6 +708,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -721,6 +735,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -734,7 +749,7 @@ let myArray = [
       {
          console.log("only ac are open");
          const acBus=(myArray.filter(acbus =>{
-               return acbus.ac==='true';
+               return acbus.ac==='True';
             }));
          buildTable(acBus)
          function buildTable(data){
@@ -747,6 +762,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -771,6 +787,7 @@ let myArray = [
                <td>${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -788,7 +805,7 @@ let myArray = [
       {
          console.log("non ac and ac all are open")
          const nonacBus=(myArray.filter(acbus =>{
-            return acbus.ac==='false';
+            return acbus.ac==='False';
          }));
          buildTable(nonacBus)
          function buildTable(data){
@@ -800,6 +817,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -827,6 +845,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -853,6 +872,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -879,6 +899,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -892,7 +913,7 @@ let myArray = [
       {
          console.log("only non ac are open");
          const nonAcBus=(myArray.filter(price =>{
-               return price.ac==='false';
+               return price.ac==='False';
             }));
          buildTable(nonAcBus)
          function buildTable(data){
@@ -905,6 +926,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -929,6 +951,7 @@ let myArray = [
                <td>${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -959,6 +982,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -979,6 +1003,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1004,6 +1029,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1029,6 +1055,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1054,6 +1081,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1072,7 +1100,7 @@ let myArray = [
             return hanifbus.operator==='Operator: Hanif, ';
          }));
          const acHanif=(hanifBus.filter(achanif=>{
-            return achanif.ac==="true";
+            return achanif.ac==="True";
          }))
          buildTable(acHanif)
          function buildTable(data){
@@ -1085,6 +1113,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1099,7 +1128,7 @@ let myArray = [
       {
          console.log("only non ac bus are");
          const acBus=(myArray.filter(acbus =>{
-            return acbus.ac==='false';
+            return acbus.ac==='False';
          }));
          buildTable(acBus)
          function buildTable(data){
@@ -1112,6 +1141,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1124,7 +1154,7 @@ let myArray = [
       {
          console.log("only ac are open");
          const acBus=(myArray.filter(acbus =>{
-               return acbus.ac==='true';
+               return acbus.ac==='True';
             }));
          buildTable(acBus)
          function buildTable(data){
@@ -1137,6 +1167,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1150,7 +1181,7 @@ let myArray = [
       {
          console.log("only ac are open");
          const acBus=(myArray.filter(acbus =>{
-               return acbus.ac==='false';
+               return acbus.ac==='False';
             }));
          buildTable(acBus)
          function buildTable(data){
@@ -1163,6 +1194,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1179,7 +1211,7 @@ let myArray = [
             return hanifbus.operator==='Operator: Hanif, ';
          }));
          const acHanif=(hanifBus.filter(achanif=>{
-            return achanif.ac==="false";
+            return achanif.ac==="False";
          }))
          buildTable(acHanif)
          function buildTable(data){
@@ -1192,6 +1224,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1206,7 +1239,7 @@ let myArray = [
       {
          console.log("only ac bus are");
          const acBus=(myArray.filter(acbus =>{
-            return acbus.ac==='true';
+            return acbus.ac==='True';
          }));
          buildTable(acBus)
          function buildTable(data){
@@ -1219,6 +1252,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1240,6 +1274,7 @@ let myArray = [
                <td>${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1270,6 +1305,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1290,6 +1326,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1315,6 +1352,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1340,6 +1378,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1365,6 +1404,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1383,7 +1423,7 @@ let myArray = [
             return shamolybus.operator==='Operator: Shamoly, ';
          }));
          const acshamoly=(shamolyBus.filter(acshamoly=>{
-            return acshamoly.ac==="true";
+            return acshamoly.ac==="True";
          }))
          buildTable(acshamoly)
          function buildTable(data){
@@ -1396,6 +1436,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1410,7 +1451,7 @@ let myArray = [
       {
          console.log("only ac are open");
          const acBus=(myArray.filter(acbus =>{
-               return acbus.ac==='true';
+               return acbus.ac==='True';
             }));
          buildTable(acBus)
          function buildTable(data){
@@ -1423,6 +1464,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1436,7 +1478,7 @@ let myArray = [
       {
          console.log("only ac are open");
          const acBus=(myArray.filter(acbus =>{
-               return acbus.ac==='false';
+               return acbus.ac==='False';
             }));
          buildTable(acBus)
          function buildTable(data){
@@ -1449,6 +1491,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1465,7 +1508,7 @@ let myArray = [
             return shamolybus.operator==='Operator: Shamoly, ';
          }));
          const acshamoly=(shamolyBus.filter(acshamoly=>{
-            return acshamoly.ac==="false";
+            return acshamoly.ac==="False";
          }))
          buildTable(acshamoly)
          function buildTable(data){
@@ -1478,6 +1521,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1491,7 +1535,7 @@ let myArray = [
       {
          console.log("only ac bus are");
          const acBus=(myArray.filter(acbus =>{
-            return acbus.ac==='true';
+            return acbus.ac==='True';
          }));
          buildTable(acBus)
          function buildTable(data){
@@ -1504,6 +1548,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1516,7 +1561,7 @@ let myArray = [
       {
          console.log("only non ac bus are");
          const acBus=(myArray.filter(acbus =>{
-            return acbus.ac==='false';
+            return acbus.ac==='False';
          }));
          buildTable(acBus)
          function buildTable(data){
@@ -1529,6 +1574,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1550,6 +1596,7 @@ let myArray = [
                <td>${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1651,6 +1698,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1669,7 +1717,7 @@ let myArray = [
             return soudiabus.operator==='Operator: Soudia, ';
          }));
          const acsoudia=(soudiaBus.filter(acsoudia=>{
-            return acsoudia.ac==="true";
+            return acsoudia.ac==="True";
          }))
          buildTable(acsoudia)
          function buildTable(data){
@@ -1682,6 +1730,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1696,7 +1745,7 @@ let myArray = [
       {
          console.log("only ac are open");
          const acBus=(myArray.filter(acbus =>{
-               return acbus.ac==='true';
+               return acbus.ac==='True';
             }));
          buildTable(acBus)
          function buildTable(data){
@@ -1709,6 +1758,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1722,7 +1772,7 @@ let myArray = [
       {
          console.log("only ac are open");
          const acBus=(myArray.filter(acbus =>{
-               return acbus.ac==='false';
+               return acbus.ac==='False';
             }));
          buildTable(acBus)
          function buildTable(data){
@@ -1735,6 +1785,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1751,7 +1802,7 @@ let myArray = [
             return soudiabus.operator==='Operator: Soudia, ';
          }));
          const acsoudia=(soudiaBus.filter(acsoudia=>{
-            return acsoudia.ac==="false";
+            return acsoudia.ac==="False";
          }))
          buildTable(acsoudia)
          function buildTable(data){
@@ -1764,6 +1815,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1777,7 +1829,7 @@ let myArray = [
       {
          console.log("only ac bus are");
          const acBus=(myArray.filter(acbus =>{
-            return acbus.ac==='true';
+            return acbus.ac==='True';
          }));
          buildTable(acBus)
          function buildTable(data){
@@ -1790,6 +1842,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1802,7 +1855,7 @@ let myArray = [
       {
          console.log("only non ac bus are");
          const acBus=(myArray.filter(acbus =>{
-            return acbus.ac==='false';
+            return acbus.ac==='False';
          }));
          buildTable(acBus)
          function buildTable(data){
@@ -1815,6 +1868,7 @@ let myArray = [
                <td>Starting at: ${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1836,6 +1890,7 @@ let myArray = [
                <td>${data[i].startTime}</td>
                <td>${data[i].endTime}</td>
                <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
                <td>${data[i].offday}</td>
                <td>${data[i].startDestination}</td>
                <td>${data[i].endDestination}</td>
@@ -1845,5 +1900,228 @@ let myArray = [
          }
          onlysoudia=1;
          onlysoudia2=0;
+      }
+   }
+
+   function marsa(){
+      if(onlymarsa===1)
+      {
+         console.log("only marsa buses are");
+         const marsaBus=(myArray.filter(marsabus =>{
+            return marsabus.operator==='Operator: Marsa ';
+         }));
+         buildTable(marsaBus)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         mixmarsa=1;
+         // onlymarsa=0;
+         // onlymarsa2=1;
+      }
+      else if(onlyshamoly===1&&onlyac===0)
+      {
+         console.log("only marsa ac bus are");
+         const marsaBus=(myArray.filter(marsabus =>{
+            return marsabus.operator==='Operator: Marsa ';
+         }));
+         const acmarsa=(marsaBus.filter(acmarsa=>{
+            return acmarsa.ac==="True";
+         }))
+         buildTable(acmarsa)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         onlyac=0;
+         onlyshamoly=3;
+      }
+      else if (onlymarsa===3&&onlyac===0)
+      {
+         console.log("only ac are open");
+         const acBus=(myArray.filter(acbus =>{
+               return acbus.ac==='True';
+            }));
+         buildTable(acBus)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         onlyac=1;
+      }
+      else if (onlyhainf===3&&onlynonac===0)
+      {
+         console.log("only ac are open");
+         const acBus=(myArray.filter(acbus =>{
+               return acbus.ac==='False';
+            }));
+         buildTable(acBus)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         onlyac=1;
+      }
+      else if(onlymarsa===1&&onlynonac===0)
+      {
+         console.log("only marsa non ac bus are");
+         const marsaBus=(myArray.filter(marsabus =>{
+            return marsabus.operator==='Operator: Marsa ';
+         }));
+         const acmarsa=(marsaBus.filter(acmarsa=>{
+            return acmarsa.ac==="False";
+         }))
+         buildTable(acmarsa)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         onlynonac=1;
+      }
+      else if(onlymarsa===1&&onlyac===1)
+      {
+         console.log("only ac bus are");
+         const acBus=(myArray.filter(acbus =>{
+            return acbus.ac==='True';
+         }));
+         buildTable(acBus)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+      }
+      else if(onlymarsa===1&&onlynonac===1)
+      {
+         console.log("only non ac bus are");
+         const acBus=(myArray.filter(acbus =>{
+            return acbus.ac==='False';
+         }));
+         buildTable(acBus)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            table.innerHTML="";
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+      }
+      else if(onlymarsa===0)
+      {
+         console.log("nonac off all show");
+         buildTable(myArray)
+         function buildTable(data){
+            var table = document.getElementById('myTable');
+            for(var i=0;i<data.length;i++)
+            {
+               var row=`<tr>
+               <td>${data[i].operator}</td>
+               <td>${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+               table.innerHTML+=row;
+            }
+         }
+         onlymarsa=1;
+         onlymarsa2=0;
       }
    }
