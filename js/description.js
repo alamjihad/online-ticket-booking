@@ -639,7 +639,7 @@ let myArray = [
    function ac(){
       if(onlynonac2===1)
       {
-         console.log("ac and non ac all are open")
+         console.log("ac and non ac all are open");
          const acBus=(myArray.filter(acbus =>{
             return acbus.ac==='True';
          }));
@@ -1089,7 +1089,7 @@ let myArray = [
                table.innerHTML+=row;
             }
          }
-         // onlyhainf=0;
+         onlyhainf=0;
          // onlyhainf2=1;
          mixhanif=1;
       }
@@ -1413,7 +1413,7 @@ let myArray = [
             }
          }
          mixshamoly=1;
-         // onlyshamoly=0;
+         onlyshamoly=0;
          // onlyshamoly2=1;
       }
       else if(onlyshamoly===1&&onlyac===0)
@@ -2125,3 +2125,24 @@ let myArray = [
          onlymarsa2=0;
       }
    }
+
+
+const bus=myArray.map(obj=>obj.operator);                                          // map method
+console.log(bus);
+const bus2 = [];                                                                        // for of method  
+for(const obj of buses){
+   const propertyValue = obj.operator;
+   bus2.push(propertyValue);
+}
+console.log(bus2);
+const newArrayOfValues=buses.map(obj=>Object.values(obj));
+console.log(newArrayOfValues);
+
+const unique=[...new Set(buses.map(obj=>obj.operator))];
+console.log(unique);
+
+
+let html="";
+unique.map((op)=>{
+   return `<input type="radio">
+`})
