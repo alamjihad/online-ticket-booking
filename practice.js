@@ -221,98 +221,71 @@ function buildTable(data){
 }
 const bus=buses.map(obj=>obj.operator);                                          // map method
 console.log(bus);
-const bus2 = [];                                                                        // for of method  
-// for(const obj of buses){
-//    const propertyValue = obj.operator;
-//    bus2.push(propertyValue);
-// }
-// console.log(bus2);
+
 const newArrayOfValues=buses.map(obj=>Object.values(obj));
 console.log(newArrayOfValues);
-// function displayContent(buttonId){
-// switch(buttonId){
-//       case "hanif":
-//          display("Hanif ,");
-//          console.log("displayHanif function is calling");
-//          break;
-//       case "shamoly":
-//          display("Shamoly ,");
-//          break;
-//       case "marsa":
-//          display("Marsa ,");
-//          break;
-//       case "soudia":
-//          display("Soudia ,");
-//          break;
-//       case "ac":
-//          display('True');
-//          break;
-//       case "nonac":
-//          display('False');
-//          break;
-//    }
-// }
-// function display(abc){
-//    console.log("displayHanif function is called");
-//    const select = buses.filter(innerArray=>{
-//       buses.operator=abc;
-//       //return innerArray[1].includes("item");
-//       return innerArray.operator=abc;
-//    });
-// //   createTable(select);
-//    buildTable(select)
-//    function buildTable(data){
-//       var table = document.getElementById('myTable');
-//       table.innerHTML="";
-//       for(var i=0;i<data.length;i++)
-//       {
-//          var row=`<tr>
-//          <td>${data[i].operator}</td>
-//          <td>Starting at: ${data[i].startTime}</td>
-//          <td>${data[i].endTime}</td>
-//          <td>${data[i].price}</td>
-//          <td>${data[i].ac}</td>
-//          <td>${data[i].offday}</td>
-//          <td>${data[i].startDestination}</td>
-//          <td>${data[i].endDestination}</td>
-//          </tr>`
-//          table.innerHTML+=row;
-//       }
-//    }
-// }
 
 const unique = [...new Set(buses.map(obj=>obj.operator))];
 console.log(unique);
 
-const text = unique.map(item=>item.split(":")[1].trim()).join(", ");
+const text = unique.map(item=>item.split(":")[1].trim()).join(",");
 console.log(text);
 
-const my = text.split(",");
-console.log(my);
+const operators = text.split(",");
+console.log(operators);
 
 const container = document.getElementById("input-container");
-my.map((element,index)=>{
+operators.map((element)=>{
    const label =document.createElement("label");
    label.textContent = element;
 
    const checkbox = document.createElement("input");
    checkbox.type = "checkbox";
    checkbox.id = element;
+   checkbox.style = "margin-left:35px";
    checkbox.onclick=xyz(element);
-
    container.appendChild(label);
    container.appendChild(checkbox);
-
    container.appendChild(document.createElement("br"));
 });
 
 function xyz(operator){
-   console.log(`hello ${operator}`);
+  // console.log(`hello ${operator}`);
+   let filteredValue = buses.filter((bu)=>{
+   //  console.log(bus);
+   //  console.log(bu.operator);
+   //  console.log(operator);
+      return bu.operator===`Operator: ${operator}`;
+   })
+   console.log(filteredValue);
+   buildTable(filteredValue)
+   function buildTable(data){
+      var table = document.getElementById('myTable');
+      table.innerHTML="";
+      for(var i=0;i<data.length;i++)
+      {
+         var row=`<tr>
+         <td>${data[i].operator}</td>
+         <td>Starting at: ${data[i].startTime}</td>
+         <td>${data[i].endTime}</td>
+         <td>${data[i].price}</td>
+         <td>${data[i].ac}</td>
+         <td>${data[i].offday}</td>
+         <td>${data[i].startDestination}</td>
+         <td>${data[i].endDestination}</td>
+         </tr>`
+         table.innerHTML+=row;
+      }
+   }
 }
 
-const newInput =document.getElementById("2nd_input");
-newInput=" ";
-let html = my.map((op)=>{
-   retrun `<input type="checkbox" value=${op} onclick=abc(${op}) id=${op}`;
-}).join(" ");
-newInput.innerHTML=html;
+
+
+
+
+// const newInput =document.getElementById("2nd_input");
+// newInput=" ";
+// let html = operators.map((op)=>{
+//    retrun `<input type="checkbox" value=${op} onclick=abc(${op}) id=${op}`;
+// }).join(" ");
+// newInput.innerHTML=html;
