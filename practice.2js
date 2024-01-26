@@ -219,61 +219,86 @@ function buildTable(data){
       table.innerHTML+=row;
    }
 }
-const bus=buses.map(obj=>obj.operator);
 
-const operatorName = document.getElementsByName("busName");
-console.log(operatorName);
-const selectedValue=[];
-function showTable(operate){
-   console.log(operate);
-   const index=selectedValue.indexOf(operate);
-   if(index!== -1)
-   {
-      selectedValue.splice(index,1);
-      console.log(selectedValue);
-   }
-   else
-   {
-      selectedValue.push(operate);
-      console.log(selectedValue);
-   }
-   for(let i=0;i<selectedValue.length;++i)
-   {
-      let filteredValue = buses.filter((bus2)=>{
-         return bus2.operator===operate;
-         });
-         buildTable(filteredValue)
-         function buildTable(data){
-            var table = document.getElementById('myTable');
-            if(filteredValue.length===1)
-            {
-               table.innerHTML="";
-            }
-            else
-            {
-               table.innerHTML=table.innerHTML;
-            }
-            for(var i=0;i<data.length;i++)
-            {
-               var row=`<tr>
-               <td>${data[i].operator}</td>
-               <td>Starting at: ${data[i].startTime}</td>
-               <td>${data[i].endTime}</td>
-               <td>${data[i].price}</td>
-               <td>${data[i].ac}</td>
-               <td>${data[i].offday}</td>
-               <td>${data[i].startDestination}</td>
-               <td>${data[i].endDestination}</td>
-               </tr>`
-               table.innerHTML+=row;
-            }
-         }
-   }
+const bus=buses.map(obj=>obj.operator);                                          // map method
+// console.log(bus);
+// const newArrayOfValues=buses.map(obj=>Object.values(obj));
+// console.log(newArrayOfValues);
+
+function abc(op){
+   console.log(op);
+    let filteredValue = buses.filter((bus2)=>{
+    return bus2.operator===op;
+    });
+    buildTable(filteredValue)
+    function buildTable(data){
+       var table = document.getElementById('myTable');
+       table.innerHTML="";
+       for(var i=0;i<data.length;i++)
+       {
+          var row=`<tr>
+          <td>${data[i].operator}</td>
+          <td>Starting at: ${data[i].startTime}</td>
+          <td>${data[i].endTime}</td>
+          <td>${data[i].price}</td>
+          <td>${data[i].ac}</td>
+          <td>${data[i].offday}</td>
+          <td>${data[i].startDestination}</td>
+          <td>${data[i].endDestination}</td>
+          </tr>`
+          table.innerHTML+=row;
+       }
+    }
  }
+
+/*tech:- 1*/
+// const newarray = {};
+// for (const element of bus){
+//   newarray[element] = true;
+// }
+// const uniqueArray = Object.keys(newarray);
+// function unique(value,index,array){
+//    return array.indexOf===index;
+// }
+
+/*tech:- 2*/
 let uniqueArray=bus.filter((value,index,array)=>array.indexOf(value)===index);
 
+/*tech:- 3*/
+// function uniqueArray(bus){
+//    function onlyUnique(value,index,arr) {
+//       return arr.indexOf(value)===index
+//    }
+// }
+// let unique = bus.filter(onlyUnique);
+
+/* tech:- 4*/
+// function uniqueArray2(bus){
+//    let a=[];
+//    for(var i=0;i<bus.length;++i)
+//    {
+//       if(a.indexOf(bus[i]===-1&&bus[i]!=' '))
+//       {
+//          a.push(bus[i]);
+//       }
+//    }
+//    return a;
+// }
+// let uniqueArray=uniqueArray2(bus);
+
+const test= [1,2, 3];
+const test1= test.map(t=>t*2);
+
+// console.log();
+
+// console.log(uniqueArray);
 const newInput =document.getElementById("2nd_input");
+const t='';
 const template =uniqueArray.map((op)=>{
-   return`${op} <input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> <br>`
-}).join(" ");
+   // console.log(op);
+   return`${op} <input type="checkbox" id="${op}" name="busName" onclick=abc("${op}") style="margin-left:35px"> <br>`
+})
+// console.log(template);
 newInput.innerHTML=template;
+
+// console.log(typeof(template));
