@@ -201,11 +201,11 @@ const buses = [
   }
 ];
 
-buildTable(buses)
 function buildTable(data) {
+  console.log(data);
   let table = document.getElementById('myTable');
-  for (var i = 0; i < data.length; i++) {
-    var row = `<tr>
+  for (let i = 0; i < data.length; i++) {
+    let row = `<tr>
       <td>${data[i].operator}</td>
       <td>Starting at: ${data[i].startTime}</td>
       <td>${data[i].endTime}</td>
@@ -218,26 +218,42 @@ function buildTable(data) {
     table.innerHTML += row;
   }
 }
+buildTable(buses)
 
 clickedItems = [];
-function selectedItems(operatorName) {
-  const index = clickedItems.indexOf(operatorName);
-  if (index === -1) {
-    clickedItems.push(operatorName);
-  }
-  else {
-    clickedItems.splice(index, 1);
-  }
-  console.log(clickedItems);
-  buildTable(clickedItems);
-}
+// function selectedItems(operatorName) {
+//   const index = clickedItems.indexOf(operatorName);
+//   if (index === -1) {
+//     clickedItems.push(operatorName);
+//   }
+//   else {
+//     clickedItems.splice(index, 1);
+//   }
+//   console.log(clickedItems);
+//   buildTable(clickedItems);
+// }
 
 const bus = buses.map(obj => obj.operator);
 let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
 const uniqeBus = uniqueArray.map((op) => {
-  return `${op} <input type="checkbox" id="${op}" name="busName" onclick=selectedItems("${op}") style="margin-left:35px"> <br>`
+  return `${op} <input type="checkbox" id="${op}" name="busName" ) style="margin-left:35px"> <br>`
 }).join(" ");
 document.getElementById("input").innerHTML = uniqeBus;
+
+const checkboxes = document.querySelectorAll("input[type='checkbox']");
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("click", handle);
+});
+function handle(event) {
+  const checkedCheckboxes = document.querySelectorAll("input[type='checkbox']:checked");
+  const checkedValues = Array.from(checkedCheckboxes).map(checkbox => checkbox.value)
+  if (checkedCheckboxes.length > 0) {
+    buildTable(checkedValues);
+  }
+  else {
+    buildTable(buses);
+  }
+}
 
 // const ac = buses.map(obj => obj.ac);
 // let uniqueArr = ac.filter((value, index, array) => array.indexOf(value) === index);

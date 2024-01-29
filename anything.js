@@ -1,6 +1,5 @@
 const newarray = {};
-for (const element of bus) 
-{
+for (const element of bus) {
   newarray[element] = true;
 }
 const uniqueArray = Object.keys(newarray);

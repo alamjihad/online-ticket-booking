@@ -1,14 +1,14 @@
 const buses = [
-    {
-       operator:"Hanif",
-       startTime:"7:00 am",
-       endTime:' Ending at: 10:00 pm, ',
-       price:800,
-       ac:false,
-       offday:['wednesday'],
-       startDestination:'Dhaka, ',
-       endDestination:'Rangpur '
-    },  
+   {
+      operator: "Hanif",
+      startTime: "7:00 am",
+      endTime: ' Ending at: 10:00 pm, ',
+      price: 800,
+      ac: false,
+      offday: ['wednesday'],
+      startDestination: 'Dhaka, ',
+      endDestination: 'Rangpur '
+   },
    //  {
    //     operator:'Marsa',
    //     startTime:"7:20 pm",
@@ -139,36 +139,36 @@ const buses = [
    //     startDestination:'Dinazpur, ',
    //     endDestination:'Chittagong, '
    //  },
-    {
-       operator:'Shamoly',
-       startTime:"9:05 pm",
-       endTime:' Ending at: 7:50 pm, ',
-       price:850,
-       ac:false,
-       offday:['friday','saturday'],
-       startDestination:'Dinazpur, ',
-       endDestination:'Chittagong, '
-    },
-      // {
-      //    operator:'Hanif',
-      //    startTime:"2:50 pm",
-      //    endTime:' Ending at: 10:30 pm, ',
-      //    price:1050,
-      //    ac:false,
-      //    offday:['wednesday','saturday'],
-      //    startDestination:'Dinazpur, ',
-      //    endDestination:'Chittagong, '
-      // },
+   {
+      operator: 'Shamoly',
+      startTime: "9:05 pm",
+      endTime: ' Ending at: 7:50 pm, ',
+      price: 850,
+      ac: false,
+      offday: ['friday', 'saturday'],
+      startDestination: 'Dinazpur, ',
+      endDestination: 'Chittagong, '
+   },
+   // {
+   //    operator:'Hanif',
+   //    startTime:"2:50 pm",
+   //    endTime:' Ending at: 10:30 pm, ',
+   //    price:1050,
+   //    ac:false,
+   //    offday:['wednesday','saturday'],
+   //    startDestination:'Dinazpur, ',
+   //    endDestination:'Chittagong, '
+   // },
    //   {
-    //     operator:'Hanif',
-    //     startTime:"5:30 am",
-    //     endTime:' Ending at: 4:55 am, ',
-    //     price:750,
-    //     ac:true,
-    //     offday:[''],
-    //     startDestination:'Dhaka, ',
-    //     endDestination:'Barishal, '
-    //  },
+   //     operator:'Hanif',
+   //     startTime:"5:30 am",
+   //     endTime:' Ending at: 4:55 am, ',
+   //     price:750,
+   //     ac:true,
+   //     offday:[''],
+   //     startDestination:'Dhaka, ',
+   //     endDestination:'Barishal, '
+   //  },
    //   {
    //      operator:'Marsa',
    //      startTime:"8:55 pm",
@@ -179,16 +179,16 @@ const buses = [
    //      startDestination:'Shylet, ',
    //      endDestination:'Dhaka, '
    //   },
-    //  {
-    //    operator:'Soudia',
-    //     startTime:"1:00 pm",
-    //     endTime:' Ending at: 5:50 am, ',
-    //     price:450,
-    //     ac:true,
-    //     offday:['monday','thursday'],
-    //     startDestination:'Rangpur, ',
-    //     endDestination:'Shylet, '
-    //  },
+   //  {
+   //    operator:'Soudia',
+   //     startTime:"1:00 pm",
+   //     endTime:' Ending at: 5:50 am, ',
+   //     price:450,
+   //     ac:true,
+   //     offday:['monday','thursday'],
+   //     startDestination:'Rangpur, ',
+   //     endDestination:'Shylet, '
+   //  },
    //  {
    //    operator:'Soudia',
    //     startTime:"6:40 am",
@@ -201,12 +201,11 @@ const buses = [
    //  }
 ];
 buildTable(buses)
-function buildTable(data){
+function buildTable(data) {
    console.log("build");
    let table = document.getElementById('myTable');
-   for(var i=0;i<data.length;i++)
-   {
-      var row=`<tr>
+   for (var i = 0; i < data.length; i++) {
+      var row = `<tr>
       <td>${data[i].operator}</td>
                                                                                                                                     
       <td>Starting at: ${data[i].startTime}</td>
@@ -217,41 +216,82 @@ function buildTable(data){
       <td>${data[i].startDestination}</td>
       <td>${data[i].endDestination}</td>
       </tr>`
-      table.innerHTML+=row;
+      table.innerHTML += row;
    }
 }
-const bus=buses.map(obj=>obj.operator);
+const bus = buses.map(obj => obj.operator);
 
-const checkbox=document.querySelectorAll('input[type="checkbox"]');
-const selectedValue=[];
-function showTable(operator){
-
-   const index=selectedValue.indexOf(operator);
-   if(index === -1)
-   {
-      selectedValue.push(operator);
-   }
-   else
-   {
-      selectedValue.splice(index,1);
+const operatorName = document.getElementsByName("busName");
+console.log(operatorName);
+const selectedValue = [];
+function abc(operate) {
+   console.log(operate);
+   const index = selectedValue.indexOf(operate);
+   if (index !== -1) {
+      selectedValue.splice(index, 1);
       console.log(selectedValue);
    }
-   // for(let i=0;i<selectedValue.length;++i)
-   // {
+   else {
+      selectedValue.push(operate);
       console.log(selectedValue);
-      //console.log(i);
-      let filteredValue = buses.filter((bus)=>{
-         return bus.operator===selectedValue;
-         });
-         console.log(filteredValue);
-        // buildTable(filteredValue)
-        buildTable(selectedValue);
+   }
+   for (let i = 0; i < selectedValue.length; ++i) {
+      let filteredValue = buses.filter((bus2) => {
+         return bus2.operator === operate;
+      });
+      buildTable(filteredValue)
+      function buildTable(data) {
+         var table = document.getElementById('myTable');
+         if (filteredValue.length === 1) {
+            table.innerHTML = "";
+         }
+         else {
+            table.innerHTML = table.innerHTML;
+         }
+         for (var i = 0; i < data.length; i++) {
+            var row = `<tr>
+               <td>${data[i].operator}</td>
+               <td>Starting at: ${data[i].startTime}</td>
+               <td>${data[i].endTime}</td>
+               <td>${data[i].price}</td>
+               <td>${data[i].ac}</td>
+               <td>${data[i].offday}</td>
+               <td>${data[i].startDestination}</td>
+               <td>${data[i].endDestination}</td>
+               </tr>`
+            table.innerHTML += row;
+         }
       }
-   //}
-let uniqueArray=bus.filter((value,index,array)=>array.indexOf(value)===index);
+   }
+}
+let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
 
-const newInput =document.getElementById("2nd_input");
-const template =uniqueArray.map((op)=>{
-   return`${op} <input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> <br>`
-}).join(" ");
-newInput.innerHTML=template;
+/*tech:- 3*/
+// function uniqueArray(bus){
+//    function onlyUnique(value,index,arr) {
+//       return arr.indexOf(value)===index
+//    }
+// }
+// let unique = bus.filter(onlyUnique);
+
+/* tech:- 4*/
+// function uniqueArray2(bus){
+//    let a=[];
+//    for(var i=0;i<bus.length;++i)
+//    {
+//       if(a.indexOf(bus[i]===-1&&bus[i]!=' '))
+//       {
+//          a.push(bus[i]);
+//       }
+//    }
+//    return a;
+// }
+// let uniqueArray=uniqueArray2(bus);
+
+const newInput = document.getElementById("2nd_input");
+const template = uniqueArray.map((op) => {
+   console.log(op);
+   return `${op} <input type="checkbox" id="${op}" onclick="abc(${op})" style="margin-left:35px"> <br>`
+})
+newInput.innerHTML = template;
+
