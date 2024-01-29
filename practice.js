@@ -1,4 +1,5 @@
 const buses = [
+//<<<<<<< HEAD
    {
       operator: "Hanif",
       startTime: "7:00 am",
@@ -207,7 +208,6 @@ function buildTable(data) {
    for (var i = 0; i < data.length; i++) {
       var row = `<tr>
       <td>${data[i].operator}</td>
-                                                                                                                                    
       <td>Starting at: ${data[i].startTime}</td>
       <td>${data[i].endTime}</td>
       <td>${data[i].price}</td>
@@ -223,6 +223,7 @@ const bus = buses.map(obj => obj.operator);
 
 const operatorName = document.getElementsByName("busName");
 console.log(operatorName);
+//<<<<<<< HEAD
 const selectedValue = [];
 function abc(operate) {
    console.log(operate);
@@ -294,4 +295,5 @@ const template = uniqueArray.map((op) => {
    return `${op} <input type="checkbox" id="${op}" onclick="abc(${op})" style="margin-left:35px"> <br>`
 })
 newInput.innerHTML = template;
+// let uniqueArray=bus.filter((value,index,array)=>array.indexOf(value)===index);
 
