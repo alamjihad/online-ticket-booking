@@ -201,111 +201,73 @@ const buses = [
   }
 ];
 
-function printTable(data) {
-  var table = document.getElementById('myTable');
-  for (var i = 0; i < data.length; i++) {
-    var row = `<tr>
-     <td>${data[i].operator}</td>
-     <td>Starting at: ${data[i].startTime}</td>
-     <td>${data[i].endTime}</td>
-     <td>${data[i].price}</td>
-     <td>${data[i].ac}</td>
-     <td>${data[i].offday}</td>
-     <td>${data[i].startDestination}</td>
-     <td>${data[i].endDestination}</td>
-     </tr>`
+function buildTable(data) {
+  console.log(data);
+  let table = document.getElementById('myTable');
+  for (let i = 0; i < data.length; i++) {
+    let row = `<tr>
+      <td>${data[i].operator}</td>
+      <td>Starting at: ${data[i].startTime}</td>
+      <td>${data[i].endTime}</td>
+      <td>${data[i].price}</td>
+      <td>${data[i].ac}</td>
+      <td>${data[i].offday}</td>
+      <td>${data[i].startDestination}</td>
+      <td>${data[i].endDestination}</td>
+      </tr>`
     table.innerHTML += row;
   }
 }
-function printTable2(data) {
-  var table = document.getElementById('myTable');
-  table.innerHTML = "";
-  for (var i = 0; i < data.length; i++) {
-    var row = `<tr>
-     <td>${data[i].operator}</td>
-     <td>Starting at: ${data[i].startTime}</td>
-     <td>${data[i].endTime}</td>
-     <td>${data[i].price}</td>
-     <td>${data[i].ac}</td>
-     <td>${data[i].offday}</td>
-     <td>${data[i].startDestination}</td>
-     <td>${data[i].endDestination}</td>
-     </tr>`
-    table.innerHTML += row;
-  }
-}
-printTable(buses);
-
-const bus = buses.map(obj => obj.operator);
-let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
-
-const acNonAc = buses.map(obj => obj.ac);
-let uniqueArray2 = acNonAc.filter((value, index, array) => array.indexOf(value) === index);
-
-const checkedBuses = [];
-let filteredValue = [];
-
-function showTable(operate) {
-  const index = checkedBuses.indexOf(operate);
-  if (index !== -1) {
-    checkedBuses.splice(index, 1);
+buildTable(buses)
+clickedItems = [];
+function track(operatorName) {
+  const index = clickedItems.indexOf(operatorName);
+  if (index === -1) {
+    clickedItems.push(operatorName);
   }
   else {
-    checkedBuses.push(operate);
+    clickedItems.splice(index, 1);
   }
-  // console.log(checkedBuses);
-  // console.log(checkedBuses.length);
-  // for (let i = 0; i < checkedBuses.length; ++i) {
-  //   filteredValue = buses.filter((bus2) => {
-  //     return bus2.operator === operate;
-  // });
-  // if (checkedBuses.length < 1) {
-  //   console.log("length < 1");
-  //   printTable(buses);
-  // }
-  // else if (checkedBuses.length === 1) {
-  //   console.log("length 1");
-  //   printTable2(filteredValue);
-  // }
-  // else if (checkedBuses.length > 0) {
-  //   console.log("length > 0");
-  //   printTable(filteredValue);
-  // }
-  // }
+  console.log(clickedItems);
+  buildTable(clickedItems);
 }
-
-function show(nonAc) {
-  let checkedAc = filteredValue.filter((non) => {
-    return non.ac === nonAc;
-  });
-  for (let i = 0; i < checkedAc.length; ++i) {
-    filteredValue = buses.filter((bus2) => {
-      return bus2.operator === operate;
-    });
-    if (checkedBuses.length < 1) {
-      console.log("length < 1");
-      printTable(buses);
-    }
-    else if (checkedBuses.length === 1) {
-      console.log("length 1");
-      printTable2(checkedAc);
-    }
-    else if (checkedBuses.length > 0) {
-      console.log("length > 0");
-      printTable(checkedAc);
-    }
-  }
-}
-
-const newInput = document.getElementById("2nd_input");
-newInput.style.marginTop = 30;
-const inputTagBuses = uniqueArray.map((op) => {
-  return `${op} <input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> <br>`
+const bus = buses.map(obj => obj.operator);
+let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
+const uniqeBus = uniqueArray.map((op) => {
+  return `${op} <input type="checkbox" id="${op}" onclick="track(${op})" name="busName" style="margin-left:35px"> <br>`
 }).join(" ");
-newInput.innerHTML = inputTagBuses;
+document.getElementById("input").innerHTML = uniqeBus;
+// function track(clickedOperator) {
+//   const selectedOperators = [];
+//   const checkedCheckboxes = document.querySelectorAll("input[name='busName']:checked");
+//   for (const checkbox of checkedCheckboxes) {
+//     selectedOperators.push(checkbox.value);
+//   }
+//   console.log("Clicked operator:", clickedOperator);
+//   console.log("Selected operator:", selectedOperators);
+//   console.log(selectedOperators);
+//   buildTable(selectedOperators);
+// }
+// const checkboxes = document.querySelectorAll("input[name='busName']");
+// checkboxes.forEach((checkbox) => {
+//   checkbox.addEventListener("click", handle);
+// });
+// function handle(event) {
+//   const checkedCheckboxes = Array.from();
+//   const filteredBuses = buses.filter((bus) => checkedCheckboxes.some((checkbox) => checkbox.value === bus.operator));
+//   console.log(bus.operator);
+//   console.log(checkboxes.value);
+//   if (checkedCheckboxes.length > 0) {
+//     buildTable(filteredBuses);
+//   }
+//   else {
+//     buildTable(buses);
+//   }
+// }
 
-const input = document.getElementById("1st_input");
-const inputTagAcNonAc = uniqueArray2.map((a) => {
-  return `${a} <input type="checkbox" id="${a}" name="busName" onclick=show("${a}") style="margin-left:45px"> <br>`
-}).join(" ");
-input.innerHTML = inputTagAcNonAc;
+// const ac = buses.map(obj => obj.ac);
+// let uniqueArr = ac.filter((value, index, array) => array.indexOf(value) === index);
+// const uniqueAc = uniqueArr.map((op) => {
+//   return `${op} <input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> <br>`
+// }).join(" ");
+// document.getElementById("ac").innerHTML = uniqueAc;
