@@ -219,41 +219,51 @@ function buildTable(data) {
   }
 }
 buildTable(buses)
-
 clickedItems = [];
-// function selectedItems(operatorName) {
-//   const index = clickedItems.indexOf(operatorName);
-//   if (index === -1) {
-//     clickedItems.push(operatorName);
-//   }
-//   else {
-//     clickedItems.splice(index, 1);
-//   }
-//   console.log(clickedItems);
-//   buildTable(clickedItems);
-// }
-
+function track(operatorName) {
+  const index = clickedItems.indexOf(operatorName);
+  if (index === -1) {
+    clickedItems.push(operatorName);
+  }
+  else {
+    clickedItems.splice(index, 1);
+  }
+  console.log(clickedItems);
+  buildTable(clickedItems);
+}
 const bus = buses.map(obj => obj.operator);
 let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
 const uniqeBus = uniqueArray.map((op) => {
-  return `${op} <input type="checkbox" id="${op}" name="busName" ) style="margin-left:35px"> <br>`
+  return `${op} <input type="checkbox" id="${op}" onclick="track(${op})" name="busName" style="margin-left:35px"> <br>`
 }).join(" ");
 document.getElementById("input").innerHTML = uniqeBus;
-
-const checkboxes = document.querySelectorAll("input[type='checkbox']");
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("click", handle);
-});
-function handle(event) {
-  const checkedCheckboxes = document.querySelectorAll("input[type='checkbox']:checked");
-  const checkedValues = Array.from(checkedCheckboxes).map(checkbox => checkbox.value)
-  if (checkedCheckboxes.length > 0) {
-    buildTable(checkedValues);
-  }
-  else {
-    buildTable(buses);
-  }
-}
+// function track(clickedOperator) {
+//   const selectedOperators = [];
+//   const checkedCheckboxes = document.querySelectorAll("input[name='busName']:checked");
+//   for (const checkbox of checkedCheckboxes) {
+//     selectedOperators.push(checkbox.value);
+//   }
+//   console.log("Clicked operator:", clickedOperator);
+//   console.log("Selected operator:", selectedOperators);
+//   console.log(selectedOperators);
+//   buildTable(selectedOperators);
+// }
+// const checkboxes = document.querySelectorAll("input[name='busName']");
+// checkboxes.forEach((checkbox) => {
+//   checkbox.addEventListener("click", handle);
+// });
+// function handle(event) {
+//   const checkedCheckboxes = Array.from();
+//   const filteredBuses = buses.filter((bus) => checkedCheckboxes.some((checkbox) => checkbox.value === bus.operator));
+//   console.log(bus.operator);
+//   console.log(checkboxes.value);
+//   if (checkedCheckboxes.length > 0) {
+//     buildTable(filteredBuses);
+//   }
+//   else {
+//     buildTable(buses);
+//   }
+// }
 
 // const ac = buses.map(obj => obj.ac);
 // let uniqueArr = ac.filter((value, index, array) => array.indexOf(value) === index);
