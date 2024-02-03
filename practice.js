@@ -253,25 +253,25 @@ function showTable(operate) {
   else {
     checkedBuses.push(operate);
   }
-  // console.log(checkedBuses);
-  // console.log(checkedBuses.length);
-  // for (let i = 0; i < checkedBuses.length; ++i) {
-  //   filteredValue = buses.filter((bus2) => {
-  //     return bus2.operator === operate;
-  // });
-  // if (checkedBuses.length < 1) {
-  //   console.log("length < 1");
-  //   printTable(buses);
-  // }
-  // else if (checkedBuses.length === 1) {
-  //   console.log("length 1");
-  //   printTable2(filteredValue);
-  // }
-  // else if (checkedBuses.length > 0) {
-  //   console.log("length > 0");
-  //   printTable(filteredValue);
-  // }
-  // }
+  console.log(checkedBuses);
+  console.log(checkedBuses.length);
+  for (let i = 0; i < checkedBuses.length; ++i) {
+    filteredValue = buses.filter((bus2) => {
+      return bus2.operator === operate;
+  });
+  if (checkedBuses.length < 1) {
+    console.log("length < 1");
+    printTable(buses);
+  }
+  else if (checkedBuses.length === 1) {
+    console.log("length 1");
+    printTable2(filteredValue);
+  }
+  else if (checkedBuses.length > 0) {
+    console.log("length > 0");
+    printTable(filteredValue);
+  }
+  }
 }
 
 function show(nonAc) {
@@ -298,7 +298,7 @@ function show(nonAc) {
 }
 
 const newInput = document.getElementById("2nd_input");
-newInput.style.marginTop = 30;
+newInput.style.marginTop = "15px";
 const inputTagBuses = uniqueArray.map((op) => {
   return `${op} <input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> <br>`
 }).join(" ");
