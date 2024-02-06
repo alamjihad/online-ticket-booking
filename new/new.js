@@ -241,20 +241,10 @@ function showTable(operate) {
       return bus2.operator === operate;
     });
   }
-  printTable(filteredValue);
+  const checkedAcNonAc = filteredValue.filter(checkedAcBus => checkedAcBus.ac === nonAcAc);
+  printTable(checkedAcNonAc);
 }
 
-function show(nonAcAc) {
-  // console.log(nonAcAc);
-  console.log(filteredValue);
-  const checkedAcNonAc = filteredValue.filter(checkedAcBus => checkedAcBus.ac === nonAcAc);
-  console.log(checkedAcNonAc);
-  // for (let i = 0; i < checkedAc.length; ++i) {
-  //   filteredValue = buses.filter((bus2) => {
-  //     return bus2.operator === operate;
-  //   });
-  // }
-}
 const newInput = document.getElementById("2nd_input");
 newInput.style.marginTop = "15px";
 const inputTagBuses = uniqueArray.map((op) => {
