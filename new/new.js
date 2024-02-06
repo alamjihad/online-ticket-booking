@@ -218,6 +218,8 @@ function printTable(data) {
   }
 }
 printTable(buses);
+
+
 const bus = buses.map(obj => obj.operator);
 let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
 const acNonAc = buses.map(obj => obj.ac);
