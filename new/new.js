@@ -217,8 +217,25 @@ function printTable(data) {
     table.innerHTML += row;
   }
 }
-printTable(buses);
 
+printTable(buses);
+var div1=document.getElementById('filt1');
+var div2=document.getElementById('filt2');
+var dis=0;
+function hideShow(){
+  if(dis==1)
+  {
+    div1.style.display="block";
+    div2.style.display="block";  
+    dis=0;
+  }
+  else
+  {
+    div1.style.display="none";
+    div2.style.display="none";
+    dis=1;
+  }
+}
 
 const bus = buses.map(obj => obj.operator);
 let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
