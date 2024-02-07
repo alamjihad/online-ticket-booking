@@ -217,6 +217,25 @@ function printTable(data) {
     table.innerHTML += row;
   }
 }
+
+function printTable2(data) {
+  var table = document.getElementById('myTable');
+  table.innerHTML = "";
+  for (var i = 0; i < data.length; i++) {
+    var row = `<tr>
+     <td>${data[i].operator}</td>
+     <td>Starting at: ${data[i].startTime}</td>
+     <td>${data[i].endTime}</td>
+     <td>${data[i].price}</td>
+     <td>${data[i].ac}</td>
+     <td>${data[i].offday}</td>
+     <td>${data[i].startDestination}</td>
+     <td>${data[i].endDestination}</td>
+     </tr>`
+    table.innerHTML += row;
+  }
+}
+
 printTable(buses);
 var div1 = document.getElementById('filt1');
 var div2 = document.getElementById('filt2');
@@ -257,8 +276,12 @@ function showTable(operate) {
       return bus2.operator === operate;
     });
   }
-  const checkedAcNonAc = filteredValue.filter(checkedAcBus => checkedAcBus.ac === nonAcAc);
-  printTable(checkedAcNonAc);
+  if (checkedBuses.length > 1) {
+    printTable(filteredValue);
+  }
+  else if (checkedBuses.length == 1) {
+    printTable2(filteredValue);
+  }
 }
 
 const newInput = document.getElementById("2nd_input");
