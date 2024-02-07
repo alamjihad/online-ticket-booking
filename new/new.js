@@ -4,7 +4,7 @@ const buses = [
     startTime: "7:00 am",
     endTime: ' Ending at: 10:00 pm, ',
     price: 800,
-    ac: false,
+    ac: "NON AC",
     offday: ['wednesday'],
     startDestination: 'Dhaka, ',
     endDestination: 'Rangpur '
@@ -14,7 +14,7 @@ const buses = [
     startTime: "7:20 pm",
     endTime: ' Ending at: 9:30am, ',
     price: 1000,
-    ac: true,
+    ac: "AC",
     offday: [''],
     startDestination: 'Shylet, ',
     endDestination: 'Chittagong '
@@ -24,7 +24,7 @@ const buses = [
     startTime: "8:15 am",
     endTime: ' Ending at: 12:15 pm,',
     price: 750,
-    ac: true,
+    ac: "AC",
     offday: ['sunday', 'monday'],
     startDestination: 'Khulna, ',
     endDestination: 'Rajshahi '
@@ -34,7 +34,7 @@ const buses = [
     startTime: "6:00 pm",
     endTime: ' Ending at: 12:25 pm, ',
     price: 1200,
-    ac: true,
+    ac: "AC",
     offday: ['saturday', 'tuesday'],
     startDestination: 'Chittagong',
     endDestination: 'Rajshahi'
@@ -44,7 +44,7 @@ const buses = [
     startTime: "12:30 pm",
     endTime: ' Ending at: 8:35 pm, ',
     price: 500,
-    ac: true,
+    ac: "AC",
     offday: ['friday'],
     startDestination: 'Dhaka',
     endDestination: 'Rangpur'
@@ -54,7 +54,7 @@ const buses = [
     startTime: "11:45 am",
     endTime: ' Ending at: 6:15 pm, ',
     price: 650,
-    ac: false,
+    ac: "NON AC",
     offday: ['wednesday', 'friday', 'monday'],
     startDestination: 'Barishal, ',
     endDestination: 'Dinazpur, '
@@ -64,7 +64,7 @@ const buses = [
     startTime: "4:15 pm",
     endTime: ' Ending at: 12:00 pm, ',
     price: 900,
-    ac: false,
+    ac: "NON AC",
     offday: ['thursday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Barishal, '
@@ -74,7 +74,7 @@ const buses = [
     startTime: "11:10 am",
     endTime: ' Ending at: 8:45 am, ',
     price: 5500,
-    ac: true,
+    ac: "AC",
     offday: [''],
     startDestination: 'Rajshahi, ',
     endDestination: 'Khulna, '
@@ -84,7 +84,7 @@ const buses = [
     startTime: "7:45 pm",
     endTime: ' Ending at: 3:00 am, ',
     price: 1000,
-    ac: true,
+    ac: "AC",
     offday: ['sunday', 'monday', 'thursday'],
     startDestination: 'Khulna, ',
     endDestination: 'Rajshahi, '
@@ -94,7 +94,7 @@ const buses = [
     startTime: "3:50 am",
     endTime: ' Ending at: 10:40 pm, ',
     price: 1000,
-    ac: true,
+    ac: "AC",
     offday: ['wednesday'],
     startDestination: 'Rangpur, ',
     endDestination: 'Rajshahi, '
@@ -104,7 +104,7 @@ const buses = [
     startTime: "5:10 pm",
     endTime: ' Ending at: 11:50 pm, ',
     price: 650,
-    ac: true,
+    ac: "AC",
     offday: ['tuesday'],
     startDestination: 'Rangpur, ',
     endDestination: 'Rajshahi, '
@@ -114,7 +114,7 @@ const buses = [
     startTime: "9:10 pm",
     endTime: ' Ending at: 12:55 pm, ',
     price: 350,
-    ac: false,
+    ac: "NON AC",
     offday: ['monday'],
     startDestination: 'Rangpur, ',
     endDestination: 'Rajshahi, '
@@ -124,7 +124,7 @@ const buses = [
     startTime: "7:35 am",
     endTime: ' Ending at: 11:55 pm, ',
     price: 500,
-    ac: false,
+    ac: "NON AC",
     offday: ['thursday', 'tuesday'],
     startDestination: 'Barishal, ',
     endDestination: 'Shylet, '
@@ -134,7 +134,7 @@ const buses = [
     startTime: "10:25 am",
     endTime: ' Ending at: 3:05 pm, ',
     price: 700,
-    ac: false,
+    ac: "NON AC",
     offday: ['wednessday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -144,7 +144,7 @@ const buses = [
     startTime: "9:05 pm",
     endTime: ' Ending at: 7:50 pm, ',
     price: 850,
-    ac: false,
+    ac: "NON AC",
     offday: ['friday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -154,7 +154,7 @@ const buses = [
     startTime: "2:50 pm",
     endTime: ' Ending at: 10:30 pm, ',
     price: 1050,
-    ac: false,
+    ac: "NON AC",
     offday: ['wednesday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -164,7 +164,7 @@ const buses = [
     startTime: "5:30 am",
     endTime: ' Ending at: 4:55 am, ',
     price: 750,
-    ac: true,
+    ac: "AC",
     offday: [''],
     startDestination: 'Dhaka, ',
     endDestination: 'Barishal, '
@@ -174,7 +174,7 @@ const buses = [
     startTime: "8:55 pm",
     endTime: ' Ending at: 11:45 am, ',
     price: 550,
-    ac: false,
+    ac: "NON AC",
     offday: ['wednessday', 'saturday'],
     startDestination: 'Shylet, ',
     endDestination: 'Dhaka, '
@@ -184,7 +184,7 @@ const buses = [
     startTime: "1:00 pm",
     endTime: ' Ending at: 5:50 am, ',
     price: 450,
-    ac: true,
+    ac: "AC",
     offday: ['monday', 'thursday'],
     startDestination: 'Rangpur, ',
     endDestination: 'Shylet, '
@@ -194,7 +194,7 @@ const buses = [
     startTime: "6:40 am",
     endTime: ' Ending at: 12:10 pm, ',
     price: 800,
-    ac: false,
+    ac: "NON AC",
     offday: ['wednesday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -217,30 +217,27 @@ function printTable(data) {
     table.innerHTML += row;
   }
 }
-
 printTable(buses);
-var div1=document.getElementById('filt1');
-var div2=document.getElementById('filt2');
-var dis=0;
-function hideShow(){
-  if(dis==1)
-  {
-    div1.style.display="block";
-    div2.style.display="block";  
-    dis=0;
+var div1 = document.getElementById('filt1');
+var div2 = document.getElementById('filt2');
+var dis = 0;
+function hideShow() {
+  if (dis == 1) {
+    div1.style.display = "block";
+    div2.style.display = "block";
+    dis = 0;
   }
-  else
-  {
-    div1.style.display="none";
-    div2.style.display="none";
-    dis=1;
+  else {
+    div1.style.display = "none";
+    div2.style.display = "none";
+    dis = 1;
   }
 }
 
 const bus = buses.map(obj => obj.operator);
 let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
-const acNonAc = buses.map(obj => obj.ac);
 
+const acNonAc = buses.map(obj => obj.ac);
 let uniqueArray2 = acNonAc.filter((value, index, array) => array.indexOf(value) === index);
 
 let checkedBuses = [];
@@ -268,13 +265,13 @@ const newInput = document.getElementById("2nd_input");
 newInput.style.marginTop = "15px";
 const inputTagBuses = uniqueArray.map((op) => {
   console.log(op);
-  return `${op} <input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> <br>`
+  return `<input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> ${op} <br>`
 }).join(" ");
 newInput.innerHTML = inputTagBuses;
 
 const input = document.getElementById("1st_input");
 const inputTagAcNonAc = uniqueArray2.map((a) => {
   console.log(a);
-  return `${a} <input type="checkbox" id="${a}" name="busName" onclick=show("${a}") style="margin-left:45px"> <br>`
+  return `<input type="checkbox" id="${a}" name="busName" onclick=show("${a}") style="margin-left:35px"> ${a}<br>`
 }).join(" ");
 input.innerHTML = inputTagAcNonAc;
