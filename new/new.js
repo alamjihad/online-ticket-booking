@@ -203,6 +203,7 @@ const buses = [
 
 function printTable(data) {
   var table = document.getElementById('myTable');
+  // table.innerHTML = "";
   for (var i = 0; i < data.length; i++) {
     var row = `<tr>
      <td>${data[i].operator}</td>
@@ -218,23 +219,78 @@ function printTable(data) {
   }
 }
 
-function printTable2(data) {
-  var table = document.getElementById('myTable');
-  table.innerHTML = "";
-  for (var i = 0; i < data.length; i++) {
-    var row = `<tr>
-     <td>${data[i].operator}</td>
-     <td>Starting at: ${data[i].startTime}</td>
-     <td>${data[i].endTime}</td>
-     <td>${data[i].price}</td>
-     <td>${data[i].ac}</td>
-     <td>${data[i].offday}</td>
-     <td>${data[i].startDestination}</td>
-     <td>${data[i].endDestination}</td>
-     </tr>`
-    table.innerHTML += row;
+const bus = buses.map(obj => obj.operator);
+let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
+
+const acNonAc = buses.map(obj => obj.ac);
+let uniqueArray2 = acNonAc.filter((value, index, array) => array.indexOf(value) === index);
+
+let checkedBuses = [];
+let filteredValue = [];
+let acFilteredValue = [];
+
+function showTable() {
+
+  let selectedBuses = [];
+
+  let filteredBusArray = [];
+  const checkBus = document.getElementsByName("busName");
+  for (let i = 0; i < checkBus.length; ++i) {
+    if (checkBus[i].checked) {
+      selectedBuses.push(checkBus[i].value);
+    }
   }
+
+  for (let i = 0; i < selectedBuses.length; ++i) {
+    filteredBusArray = buses.filter((bus2) => {
+      return bus2.operator === checkBus[i].value;
+    })
+  }
+  // console.log(filteredBusArray);
+  // printTable(filteredBusArray);
+
+  let selectedAcType = [];
+  let filterAcArray = [];
+
+  const checkAc = document.getElementsByName("acType");
+  for (let i = 0; i < checkAc.length; ++i) {
+    if (checkAc[i].checked) {
+      selectedAcType.push(checkAc[i].value);
+    }
+  }
+  for (let i = 0; i < selectedAcType.length; ++i) {
+    filterAcArray = buses.filter((bus3) => {
+      return bus3.ac === checkAc[i].value;
+    })
+  }
+  // console.log(filterAcArray);
+  // printTable(filterAcArray);
+
+  filteredValue = buses.filter((bus) => {
+    return selectedBuses.includes(bus.operator) && selectedAcType.includes(bus.ac);
+  });
+  console.log(filteredValue);
+  printTable(filteredValue);
 }
+const newInput = document.getElementById("2nd_input");
+newInput.style.marginTop = "15px";
+const inputTagBuses = uniqueArray.map((op) => {
+  return `<input type="checkbox" value="${op}" name="busName" onclick=showTable() style="margin-left:35px"> ${op} <br>`
+}).join(" ");
+newInput.innerHTML = inputTagBuses;
+
+const input = document.getElementById("1st_input");
+const inputTagAcNonAc = uniqueArray2.map((a) => {
+  return `<input type="checkbox" value="${a}" name="acType" onclick=showTable() style="margin-left:35px"> ${a}<br>`
+}).join(" ");
+input.innerHTML = inputTagAcNonAc;
+
+
+
+
+
+
+
 
 printTable(buses);
 var div1 = document.getElementById('filt1');
@@ -252,69 +308,3 @@ function hideShow() {
     dis = 1;
   }
 }
-
-const bus = buses.map(obj => obj.operator);
-let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === index);
-
-const acNonAc = buses.map(obj => obj.ac);
-let uniqueArray2 = acNonAc.filter((value, index, array) => array.indexOf(value) === index);
-
-let checkedBuses = [];
-var filteredValue = [];
-let acFilteredValue = [];
-function showTable(operate) {
-  const index = checkedBuses.indexOf(operate);
-  if (index !== -1) {
-    checkedBuses.splice(index, 1);
-  }
-  else {
-    checkedBuses.push(operate);
-  }
-  console.log(checkedBuses);
-  for (let i = 0; i < checkedBuses.length; ++i) {
-    filteredValue = buses.filter((bus2) => {
-      return bus2.operator === operate;
-    });
-  }
-  console.log(filteredValue);
-  if (checkedBuses.length === 1) {
-    printTable2(filteredValue);
-  }
-  else if (checkedBuses.length > 1) {
-    printTable(filteredValue);
-  }
-  else if (checkedBuses.length === 0) {
-    printTable2(buses);
-  }
-}
-function show(acnon) {
-  console.log(checkedBuses);
-  for (let i = 0; i < filteredValue.length; ++i) {
-    newArray = filteredValue.filter((bus3) => {
-      return bus3.ac === acnon;
-    });
-  }
-  if (filteredValue.length === 1) {
-    printTable2(newArray);
-  }
-  else if (filteredValue === 0) {
-    printTable(buses);
-  }
-  else if (filteredValue.length > 1) {
-    printTable2(newArray);
-  }
-}
-const newInput = document.getElementById("2nd_input");
-newInput.style.marginTop = "15px";
-const inputTagBuses = uniqueArray.map((op) => {
-  console.log(op);
-  return `<input type="checkbox" id="${op}" name="busName" onclick=showTable("${op}") style="margin-left:35px"> ${op} <br>`
-}).join(" ");
-newInput.innerHTML = inputTagBuses;
-
-const input = document.getElementById("1st_input");
-const inputTagAcNonAc = uniqueArray2.map((a) => {
-  console.log(a);
-  return `<input type="checkbox" id="${a}" name="busName" onclick=show("${a}") style="margin-left:35px"> ${a}<br>`
-}).join(" ");
-input.innerHTML = inputTagAcNonAc;
