@@ -261,8 +261,9 @@ let uniqueArray2 = acNonAc.filter((value, index, array) => array.indexOf(value) 
 
 let checkedBuses = [];
 let filteredValue = [];
-console.log(filteredValue);
-function showTable(operate) {
+let acFilteredValue = [];
+
+function showTable(operate,ac) {
   console.log(operate);
   const index = checkedBuses.indexOf(operate);
   if (index !== -1) {
@@ -271,19 +272,29 @@ function showTable(operate) {
   else {
     checkedBuses.push(operate);
   }
+  console.log(checkedBuses);
   for (let i = 0; i < checkedBuses.length; ++i) {
     filteredValue = buses.filter((bus2) => {
       return bus2.operator === operate;
     });
   }
-  if (checkedBuses.length > 1) {
-    printTable(filteredValue);
+  console.log(filteredValue);
+  for(let i=0;i,filteredValue.length;++i)
+  {
+    acFilteredValue=filteredValue.filter((acBus)=>{
+      return acBus.ac===ac;
+    })
   }
-  else if (checkedBuses.length == 1) {
+  if (checkedBuses.length === 1) {
     printTable2(filteredValue);
   }
+  else if (checkedBuses.length > 1) {
+    printTable(filteredValue);
+  }
+  else if (checkedBuses.length === 0) {
+    printTable2(buses);
+  }
 }
-
 const newInput = document.getElementById("2nd_input");
 newInput.style.marginTop = "15px";
 const inputTagBuses = uniqueArray.map((op) => {
@@ -295,6 +306,6 @@ newInput.innerHTML = inputTagBuses;
 const input = document.getElementById("1st_input");
 const inputTagAcNonAc = uniqueArray2.map((a) => {
   console.log(a);
-  return `<input type="checkbox" id="${a}" name="busName" onclick=show("${a}") style="margin-left:35px"> ${a}<br>`
+  return `<input type="checkbox" id="${a}" name="busName" onclick=showTable("${a}") style="margin-left:35px"> ${a}<br>`
 }).join(" ");
 input.innerHTML = inputTagAcNonAc;
