@@ -4,7 +4,7 @@ const buses = [
     startTime: "7:00 am",
     endTime: ' Ending at: 10:00 pm, ',
     price: 800,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['wednesday'],
     startDestination: 'Dhaka, ',
     endDestination: 'Rangpur '
@@ -54,7 +54,7 @@ const buses = [
     startTime: "11:45 am",
     endTime: ' Ending at: 6:15 pm, ',
     price: 650,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['wednesday', 'friday', 'monday'],
     startDestination: 'Barishal, ',
     endDestination: 'Dinazpur, '
@@ -64,7 +64,7 @@ const buses = [
     startTime: "4:15 pm",
     endTime: ' Ending at: 12:00 pm, ',
     price: 900,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['thursday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Barishal, '
@@ -114,7 +114,7 @@ const buses = [
     startTime: "9:10 pm",
     endTime: ' Ending at: 12:55 pm, ',
     price: 350,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['monday'],
     startDestination: 'Rangpur, ',
     endDestination: 'Rajshahi, '
@@ -124,7 +124,7 @@ const buses = [
     startTime: "7:35 am",
     endTime: ' Ending at: 11:55 pm, ',
     price: 500,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['thursday', 'tuesday'],
     startDestination: 'Barishal, ',
     endDestination: 'Shylet, '
@@ -134,7 +134,7 @@ const buses = [
     startTime: "10:25 am",
     endTime: ' Ending at: 3:05 pm, ',
     price: 700,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['wednessday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -144,7 +144,7 @@ const buses = [
     startTime: "9:05 pm",
     endTime: ' Ending at: 7:50 pm, ',
     price: 850,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['friday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -154,7 +154,7 @@ const buses = [
     startTime: "2:50 pm",
     endTime: ' Ending at: 10:30 pm, ',
     price: 1050,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['wednesday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -174,7 +174,7 @@ const buses = [
     startTime: "8:55 pm",
     endTime: ' Ending at: 11:45 am, ',
     price: 550,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['wednessday', 'saturday'],
     startDestination: 'Shylet, ',
     endDestination: 'Dhaka, '
@@ -194,7 +194,7 @@ const buses = [
     startTime: "6:40 am",
     endTime: ' Ending at: 12:10 pm, ',
     price: 800,
-    ac: "NON AC",
+    ac: "NON_AC",
     offday: ['wednesday', 'saturday'],
     startDestination: 'Dinazpur, ',
     endDestination: 'Chittagong, '
@@ -260,11 +260,9 @@ const acNonAc = buses.map(obj => obj.ac);
 let uniqueArray2 = acNonAc.filter((value, index, array) => array.indexOf(value) === index);
 
 let checkedBuses = [];
-let filteredValue = [];
+var filteredValue = [];
 let acFilteredValue = [];
-
-function showTable(operate,ac) {
-  console.log(operate);
+function showTable(operate) {
   const index = checkedBuses.indexOf(operate);
   if (index !== -1) {
     checkedBuses.splice(index, 1);
@@ -279,12 +277,6 @@ function showTable(operate,ac) {
     });
   }
   console.log(filteredValue);
-  for(let i=0;i,filteredValue.length;++i)
-  {
-    acFilteredValue=filteredValue.filter((acBus)=>{
-      return acBus.ac===ac;
-    })
-  }
   if (checkedBuses.length === 1) {
     printTable2(filteredValue);
   }
@@ -293,6 +285,23 @@ function showTable(operate,ac) {
   }
   else if (checkedBuses.length === 0) {
     printTable2(buses);
+  }
+}
+function show(acnon) {
+  console.log(checkedBuses);
+  for (let i = 0; i < filteredValue.length; ++i) {
+    newArray = filteredValue.filter((bus3) => {
+      return bus3.ac === acnon;
+    });
+  }
+  if (filteredValue.length === 1) {
+    printTable2(newArray);
+  }
+  else if (filteredValue === 0) {
+    printTable(buses);
+  }
+  else if (filteredValue.length > 1) {
+    printTable2(newArray);
   }
 }
 const newInput = document.getElementById("2nd_input");
@@ -306,6 +315,6 @@ newInput.innerHTML = inputTagBuses;
 const input = document.getElementById("1st_input");
 const inputTagAcNonAc = uniqueArray2.map((a) => {
   console.log(a);
-  return `<input type="checkbox" id="${a}" name="busName" onclick=showTable("${a}") style="margin-left:35px"> ${a}<br>`
+  return `<input type="checkbox" id="${a}" name="busName" onclick=show("${a}") style="margin-left:35px"> ${a}<br>`
 }).join(" ");
 input.innerHTML = inputTagAcNonAc;
