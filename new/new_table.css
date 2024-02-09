@@ -1,0 +1,25 @@
+th,
+td {
+  border: 1px solid black;
+  padding: 11.9px;
+  font-size: 17.5px;
+}
+
+table {
+  border: 1px solid black;
+  margin-left: 25px;
+}
+
+th {
+  background-color: aquamarine;
+  color: blue;
+}
+
+td {
+  background-color: cadetblue;
+  color: antiquewhite;
+}
+
+input {
+  cursor: pointer;
+}
