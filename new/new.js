@@ -2,208 +2,208 @@ const buses = [
   {
     operator: "Hanif",
     startTime: "7:00 am",
-    endTime: ' Ending at: 10:00 pm, ',
+    endTime: ' Ending at: 10:00 pm ',
     price: 800,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['wednesday'],
-    startDestination: 'Dhaka, ',
+    startDestination: 'Dhaka ',
     endDestination: 'Rangpur '
   },
   {
     operator: 'Marsa',
     startTime: "7:20 pm",
-    endTime: ' Ending at: 9:30am, ',
+    endTime: ' Ending at: 9:30am ',
     price: 1000,
-    ac: "AC",
+    ac: "Ac",
     offday: [''],
-    startDestination: 'Shylet, ',
+    startDestination: 'Shylet ',
     endDestination: 'Chittagong '
   },
   {
     operator: 'Hanif',
     startTime: "8:15 am",
-    endTime: ' Ending at: 12:15 pm,',
+    endTime: ' Ending at: 12:15 pm',
     price: 750,
-    ac: "AC",
+    ac: "Ac",
     offday: ['sunday', 'monday'],
-    startDestination: 'Khulna, ',
+    startDestination: 'Khulna ',
     endDestination: 'Rajshahi '
   },
   {
     operator: 'Shamoly',
     startTime: "6:00 pm",
-    endTime: ' Ending at: 12:25 pm, ',
+    endTime: ' Ending at: 12:25 pm ',
     price: 1200,
-    ac: "AC",
+    ac: "Ac",
     offday: ['saturday', 'tuesday'],
-    startDestination: 'Chittagong',
-    endDestination: 'Rajshahi'
+    startDestination: 'Chittagong ',
+    endDestination: 'Rajshahi '
   },
   {
     operator: 'Soudia',
     startTime: "12:30 pm",
-    endTime: ' Ending at: 8:35 pm, ',
+    endTime: ' Ending at: 8:35 pm ',
     price: 500,
-    ac: "AC",
+    ac: "Ac",
     offday: ['friday'],
-    startDestination: 'Dhaka',
-    endDestination: 'Rangpur'
+    startDestination: 'Dhaka ',
+    endDestination: 'Rangpur '
   },
   {
     operator: 'Shamoly',
     startTime: "11:45 am",
-    endTime: ' Ending at: 6:15 pm, ',
+    endTime: ' Ending at: 6:15 pm ',
     price: 650,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['wednesday', 'friday', 'monday'],
-    startDestination: 'Barishal, ',
-    endDestination: 'Dinazpur, '
+    startDestination: 'Barishal ',
+    endDestination: 'Dinazpur '
   },
   {
     operator: 'Marsa',
     startTime: "4:15 pm",
-    endTime: ' Ending at: 12:00 pm, ',
+    endTime: ' Ending at: 12:00 pm ',
     price: 900,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['thursday'],
-    startDestination: 'Dinazpur, ',
-    endDestination: 'Barishal, '
+    startDestination: 'Dinazpur ',
+    endDestination: 'Barishal '
   },
   {
     operator: 'Shamoly',
     startTime: "11:10 am",
-    endTime: ' Ending at: 8:45 am, ',
+    endTime: ' Ending at: 8:45 am ',
     price: 5500,
-    ac: "AC",
+    ac: "Ac",
     offday: [''],
-    startDestination: 'Rajshahi, ',
-    endDestination: 'Khulna, '
+    startDestination: 'Rajshahi ',
+    endDestination: 'Khulna '
   },
   {
     operator: "Marsa",
     startTime: "7:45 pm",
-    endTime: ' Ending at: 3:00 am, ',
+    endTime: ' Ending at: 3:00 am ',
     price: 1000,
-    ac: "AC",
+    ac: "Ac",
     offday: ['sunday', 'monday', 'thursday'],
-    startDestination: 'Khulna, ',
-    endDestination: 'Rajshahi, '
+    startDestination: 'Khulna ',
+    endDestination: 'Rajshahi '
   },
   {
     operator: 'Soudia',
     startTime: "3:50 am",
-    endTime: ' Ending at: 10:40 pm, ',
+    endTime: ' Ending at: 10:40 pm ',
     price: 1000,
-    ac: "AC",
+    ac: "Ac",
     offday: ['wednesday'],
-    startDestination: 'Rangpur, ',
-    endDestination: 'Rajshahi, '
+    startDestination: 'Rangpur ',
+    endDestination: 'Rajshahi '
   },
   {
     operator: 'Marsa',
     startTime: "5:10 pm",
-    endTime: ' Ending at: 11:50 pm, ',
+    endTime: ' Ending at: 11:50 pm ',
     price: 650,
-    ac: "AC",
+    ac: "Ac",
     offday: ['tuesday'],
-    startDestination: 'Rangpur, ',
-    endDestination: 'Rajshahi, '
+    startDestination: 'Rangpur ',
+    endDestination: 'Rajshahi '
   },
   {
     operator: 'Soudia',
     startTime: "9:10 pm",
-    endTime: ' Ending at: 12:55 pm, ',
+    endTime: ' Ending at: 12:55 pm ',
     price: 350,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['monday'],
-    startDestination: 'Rangpur, ',
-    endDestination: 'Rajshahi, '
+    startDestination: 'Rangpur ',
+    endDestination: 'Rajshahi '
   },
   {
     operator: 'Shamoly',
     startTime: "7:35 am",
-    endTime: ' Ending at: 11:55 pm, ',
+    endTime: ' Ending at: 11:55 pm ',
     price: 500,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['thursday', 'tuesday'],
-    startDestination: 'Barishal, ',
-    endDestination: 'Shylet, '
+    startDestination: 'Barishal ',
+    endDestination: 'Shylet '
   },
   {
     operator: 'Soudia',
     startTime: "10:25 am",
-    endTime: ' Ending at: 3:05 pm, ',
+    endTime: ' Ending at: 3:05 pm ',
     price: 700,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['wednessday', 'saturday'],
-    startDestination: 'Dinazpur, ',
-    endDestination: 'Chittagong, '
+    startDestination: 'Dinazpur ',
+    endDestination: 'Chittagong '
   },
   {
     operator: 'Shamoly',
     startTime: "9:05 pm",
-    endTime: ' Ending at: 7:50 pm, ',
+    endTime: ' Ending at: 7:50 pm ',
     price: 850,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['friday', 'saturday'],
-    startDestination: 'Dinazpur, ',
-    endDestination: 'Chittagong, '
+    startDestination: 'Dinazpur ',
+    endDestination: 'Chittagong '
   },
   {
     operator: 'Hanif',
     startTime: "2:50 pm",
-    endTime: ' Ending at: 10:30 pm, ',
+    endTime: ' Ending at: 10:30 pm ',
     price: 1050,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['wednesday', 'saturday'],
-    startDestination: 'Dinazpur, ',
-    endDestination: 'Chittagong, '
+    startDestination: 'Dinazpur ',
+    endDestination: 'Chittagong '
   },
   {
     operator: 'Hanif',
     startTime: "5:30 am",
-    endTime: ' Ending at: 4:55 am, ',
+    endTime: ' Ending at: 4:55 am ',
     price: 750,
-    ac: "AC",
+    ac: "Ac",
     offday: [''],
-    startDestination: 'Dhaka, ',
-    endDestination: 'Barishal, '
+    startDestination: 'Dhaka ',
+    endDestination: 'Barishal '
   },
   {
     operator: 'Marsa',
     startTime: "8:55 pm",
-    endTime: ' Ending at: 11:45 am, ',
+    endTime: ' Ending at: 11:45 am ',
     price: 550,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['wednessday', 'saturday'],
-    startDestination: 'Shylet, ',
-    endDestination: 'Dhaka, '
+    startDestination: 'Shylet ',
+    endDestination: 'Dhaka '
   },
   {
     operator: 'Soudia',
     startTime: "1:00 pm",
-    endTime: ' Ending at: 5:50 am, ',
+    endTime: ' Ending at: 5:50 am ',
     price: 450,
-    ac: "AC",
+    ac: "Ac",
     offday: ['monday', 'thursday'],
-    startDestination: 'Rangpur, ',
-    endDestination: 'Shylet, '
+    startDestination: 'Rangpur ',
+    endDestination: 'Shylet '
   },
   {
     operator: 'Soudia',
     startTime: "6:40 am",
-    endTime: ' Ending at: 12:10 pm, ',
+    endTime: ' Ending at: 12:10 pm ',
     price: 800,
-    ac: "NON_AC",
+    ac: "Non Ac",
     offday: ['wednesday', 'saturday'],
-    startDestination: 'Dinazpur, ',
-    endDestination: 'Chittagong, '
+    startDestination: 'Dinazpur ',
+    endDestination: 'Chittagong '
   }
 ];
 
 function printTable(data) {
   var table = document.getElementById('myTable');
-  // table.innerHTML = "";
+  table.innerHTML = "";
   for (var i = 0; i < data.length; i++) {
     var row = `<tr>
      <td>${data[i].operator}</td>
@@ -251,8 +251,6 @@ function showTable() {
 
   let selectedBuses = [];
 
-  let filteredBusArray = [];
-
   const checkBus = document.getElementsByName("busName");
   for (let i = 0; i < checkBus.length; ++i) {
     if (checkBus[i].checked) {
@@ -260,16 +258,13 @@ function showTable() {
     }
   }
 
-  for (let i = 0; i < selectedBuses.length; ++i) {
-    filteredBusArray = buses.filter((bus2) => {
-      return bus2.operator === checkBus[i].value;
+  if (selectedBuses.length > 0) {
+    filteredValue = buses.filter((bus) => {
+      return selectedBuses.includes(bus.operator);
     })
+    console.log(filteredValue);
   }
-  // console.log(filteredBusArray);
-  printTable(filteredBusArray);
-
   let selectedAcType = [];
-  let filterAcArray = [];
 
   const checkAc = document.getElementsByName("acType");
   for (let i = 0; i < checkAc.length; ++i) {
@@ -277,18 +272,13 @@ function showTable() {
       selectedAcType.push(checkAc[i].value);
     }
   }
-  for (let i = 0; i < selectedAcType.length; ++i) {
-    filterAcArray = buses.filter((bus3) => {
-      return bus3.ac === checkAc[i].value;
+
+  if (selectedAcType.length > 0) {
+    filteredValue = filteredValue.filter((acTypeOfBus) => {
+      return selectedAcType.includes(acTypeOfBus.ac)
     })
   }
-  // console.log(filterAcArray);
-  printTable(filterAcArray);
-
-  filteredValue = buses.filter((bus) => {
-    return selectedBuses.includes(bus.operator) && selectedAcType.includes(bus.ac);
-  });
-  console.log(filteredValue);
+  
   printTable(filteredValue);
 }
 const newInput = document.getElementById("2nd_input");
