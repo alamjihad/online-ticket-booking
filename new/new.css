@@ -225,3 +225,7 @@ i {
 .operator {
   padding-top: 5px;
 }
+
+#panel {
+  display: none;
+}

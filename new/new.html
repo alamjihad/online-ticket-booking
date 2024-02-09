@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./new.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -15,8 +16,8 @@
         OPERATOR
       </div>
       <i style="display: flex;flex-direction: column;">
-        <i class="fa-solid fa-caret-up fa-fw"></i>
-        <i class="fa-solid fa-caret-down fa-fw"></i>
+        <i class="fa-solid fa-caret-up fa-fw" onclick="upDown(1)"></i>
+        <i class="fa-solid fa-caret-down fa-fw" onclick="upDown(2)"></i>
       </i>
     </div>
 
@@ -25,8 +26,8 @@
         DEPARTURE TIME
       </div>
       <i style="display: flex;flex-direction: column;">
-        <i class="fa-solid fa-caret-up fa-fw"></i>
-        <i class="fa-solid fa-caret-down fa-fw"></i>
+        <i class="fa-solid fa-caret-up fa-fw" onclick="upDown(3)"></i>
+        <i class="fa-solid fa-caret-down fa-fw" onclick="upDown(4)"></i>
       </i>
     </div>
 
@@ -35,19 +36,21 @@
         FARE
       </div>
       <i style="display: flex;flex-direction: column;">
-        <i class="fa-solid fa-caret-up fa-fw"></i>
-        <i class="fa-solid fa-caret-down fa-fw"></i>
+        <i class="fa-solid fa-caret-up fa-fw" onclick="upDown(5)"></i>
+        <i class="fa-solid fa-caret-down fa-fw" onclick="upDown(6)"></i>
       </i>
     </div>
     <button onclick="hideShow()" id="filter">
       FILTER BY
     </button>
   </div>
-  <div id="1st_input">
-    Bus type
-  </div>
-  <div id="2nd_input">
-    Buses
+  <div id="panel">
+    <div id="1st_input">
+      Bus type
+    </div>
+    <div id="2nd_input">
+      Buses
+    </div>
   </div>
   <table>
     <tr>

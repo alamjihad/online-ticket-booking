@@ -225,15 +225,34 @@ let uniqueArray = bus.filter((value, index, array) => array.indexOf(value) === i
 const acNonAc = buses.map(obj => obj.ac);
 let uniqueArray2 = acNonAc.filter((value, index, array) => array.indexOf(value) === index);
 
+printTable(buses);
+
+let panel = document.getElementById("panel");
+var dis = 0;
+
+function hideShow() {
+  if (dis == 1) {
+    panel.style.display = "block";
+    dis = 0;
+  }
+  else {
+    panel.style.display = "none";
+    dis = 1;
+  }
+}
+
 let checkedBuses = [];
-let filteredValue = [];
+let filteredValue = buses;
 let acFilteredValue = [];
 
 function showTable() {
 
+  filteredValue = [];
+
   let selectedBuses = [];
 
   let filteredBusArray = [];
+
   const checkBus = document.getElementsByName("busName");
   for (let i = 0; i < checkBus.length; ++i) {
     if (checkBus[i].checked) {
@@ -247,7 +266,7 @@ function showTable() {
     })
   }
   // console.log(filteredBusArray);
-  // printTable(filteredBusArray);
+  printTable(filteredBusArray);
 
   let selectedAcType = [];
   let filterAcArray = [];
@@ -264,7 +283,7 @@ function showTable() {
     })
   }
   // console.log(filterAcArray);
-  // printTable(filterAcArray);
+  printTable(filterAcArray);
 
   filteredValue = buses.filter((bus) => {
     return selectedBuses.includes(bus.operator) && selectedAcType.includes(bus.ac);
@@ -285,26 +304,79 @@ const inputTagAcNonAc = uniqueArray2.map((a) => {
 }).join(" ");
 input.innerHTML = inputTagAcNonAc;
 
+function operatorUP() {
+  const operator1 = filteredValue.sort((a, b) => {
+    a = a.operator.toLocaleLowerCase();
+    b = b.operator.toLocaleLowerCase();
+    if (a < b) {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+    return 0;
+  });
+  printTable(operator1);
+}
 
+function operatorDown() {
+  const operator2 = filteredValue.sort((a, b) => {
+    a = a.operator.toLocaleLowerCase();
+    b = b.operator.toLocaleLowerCase();
+    if (a > b) {
+      return -1;
+    }
+    if (a < b) {
+      return 1;
+    }
+    return 0;
+  });
+  printTable(operator2);
+}
 
+function timeUp() {
+  const time1 = filteredValue.sort(function (a, b) {
+    return Date.parse('1970/01/01 ' + a.startTime.slice(0, -2) + ' ' + a.startTime.slice(-2)) - Date.parse('1970/01/01 ' + b.startTime.slice(0, -2) + ' ' + b.startTime.slice(-2))
+  });
+  printTable(time1);
+}
 
+function timeDown() {
+  const time2 = filteredValue.sort(function (a, b) {
+    return Date.parse('1970/01/01 ' + b.startTime.slice(0, -2) + ' ' + b.startTime.slice(-2)) - Date.parse('1970/01/01 ' + a.startTime.slice(0, -2) + ' ' + a.startTime.slice(-2))
+  });
+  printTable(time2);
+}
 
+function fareUp() {
+  const price = (a, b) => a.price - b.price;
+  const fare1 = (filteredValue.sort(price));
+  printTable(fare1);
+}
 
+function fareDown() {
+  const pric = (a, b) => b.price - a.price;
+  const price2 = (filteredValue.sort(pric));
+  printTable(price2);
+}
 
-
-printTable(buses);
-var div1 = document.getElementById('filt1');
-var div2 = document.getElementById('filt2');
-var dis = 0;
-function hideShow() {
-  if (dis == 1) {
-    div1.style.display = "block";
-    div2.style.display = "block";
-    dis = 0;
+function upDown(number) {
+  if (number === 1) {
+    operatorUP();
+  }
+  else if (number === 2) {
+    operatorDown();
+  }
+  else if (number === 3) {
+    timeUp();
+  }
+  else if (number === 4) {
+    timeDown();
+  }
+  else if (number === 5) {
+    fareUp();
   }
   else {
-    div1.style.display = "none";
-    div2.style.display = "none";
-    dis = 1;
+    fareDown();
   }
 }
